@@ -1,17 +1,11 @@
-var http = require('http');
-var port = process.env.port || 1337;
-var express = require('express');
-var handlebars = require('express3-handlebars');
-var path = require('path');
+var fs = require("fs");
+var express = require("express");
+app = express.createServer();
 
-var application = express();
-
-application.use(express.static(path.join(__dirname, 'public')));
-
-application.engine('handlebars', handlebars({ defaultLayout: 'main' }));
-
-application.get('/', function(req, res){
-    res.render('index.handlebars', { someProp: 3 });
+app.use(express.static(__dirname + '/public'));
+app.get('/', function(req, res) {
+    fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text){
+        res.send(text);
+    });
 });
-
-application.listen(port);
+app.listen(3000);
