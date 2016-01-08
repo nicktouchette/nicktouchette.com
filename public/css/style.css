@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: purple;
+}
+
+a:hover {
+  color: white;
+}
+
+#scene {
+  position: absolute;
+  width: 100%;
+}
+
+.light {
+  position: absolute;
+  transform-origin: 137px 0px;
+  left: 50%;
+  width: 275px;
+  height: 400px;
+}
+
+.light img {
+  position: absolute;
+}
+
+#nav {
+  position: absolute;
+  font-size: 36px;
+  width: 50%;
+  top: 75%;
+}
+
+#nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+#nav ul li{
+  float: left;
+  min-width: 33.334%;
+  text-align: center;
+}
+
+#nav ul li a {
+  display: block;
+  width: 100%;
+}
+
+#bulb {
+  z-index: -1;
+  height: 140px;
+  left: 120px;
+  opacity: 1;
+}
+
+#glare {
+  top: 115px;
+  left: -5px;
+  filter: invert(75%);
+}
+
+#content {
+  position: absolute;
+  font-size: 38px;
+  top: 22%;
+  margin-left: 55px;
+}
+
+.preload-images {
+  position: absolute;
+  display: none;
+  left: 9999px;
+}
+
+#robot {
+  position: absolute;
+  width: 200px;
+  height: 284px;
+  margin: 0 auto;
+  left: 54%;
+  top: 25%;
+}
+
+#robot .parts img {
+  position: absolute;
+}
+
+#head {
+  z-index: 10;
+  left: 65px;
+  top: 15px;
+}
+
+#armleft {
+  transform-origin: 14px 6px;
+  z-index: 8;
+  left: 52px;
+  top: 100px;
+}
+
+#armright {
+  transform-origin: 10px 10px;
+  z-index: 9;
+  display: block;
+  left: 132px;
+  top: 125px;
+}
+
+#armleftfront {
+  transform-origin: 41px 7px;
+  z-index: 8;
+  left: 17px;
+  top: 150px;
+}
+
+#armrightfront {
+  transform-origin: 62px 9px;
+  z-index: 9;
+  display: block;
+  left: 87px;
+  top: 192px;
+}
+
+#torsotop {
+  z-index: 8;
+  left: 65px;
+  top: 70px;
+}
+
+#torsodown {
+  z-index: 7;
+  left: 85px;
+  top: 140px;
+}
+
+#leg {
+  z-index: 6;
+  left: 100px;
+  top: 160px;
+}
+
+#wheel {
+  z-index: 5;
+  left: 90px;
+  top: 210px;
+}

@@ -1,14 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="description" content="The portfolio of Nick Touchette" />
-        <Title>Nick Touchette</Title>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <div id="centertext">
-            <h1>Nick Touchette</h1>
-            <p>Coding has started<br />Stay tuned for more</p>
-        </div>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animations</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+
+  <div id="scene">
+    <div class="light">
+      <img id="bulb" src="./img/lightbulb.png"/>
+      <img id="glare" src="./img/glare.png"/>
+    </div>
+  </div>
+  <div id="robot">
+    <div class="parts">
+      <img id="head" class="part upperbody" src="./img/robot/robot-head-up.png" alt="head">
+      <img id="armleft" class="part" src="./img/robot/robot-arm-left.png" alt="arm-left">
+      <img id="armright" class="part" src="./img/robot/robot-arm-right.png" alt="arm-right">
+      <img id="armleftfront" class="part" src="./img/robot/robot-arm-left-front.png" alt="arm-left-front">
+      <img id="armrightfront" class="part" src="./img/robot/robot-arm-right-front.png" alt="arm-right-front">
+      <img id="torsotop" class="part upperbody" src="./img/robot/robot-torso-top.png" alt="torso-top">
+      <img id="torsodown" class="part upperbody" src="./img/robot/robot-torso-down.png" alt="torso-down">
+      <img id="leg" class="part" src="./img/robot/robot-leg.png" alt="leg">
+      <img id="wheel" class="part" src="./img/robot/robot-wheel.png" alt="wheel">
+    </div>
+  </div>
+
+  <div id="nav"><div>
+  <div class="preload-images">
+    <img src="./img/robot/robot-head-down.png">
+    <img src="./img/robot/robot-head-up.png">
+  </div>
+  <script src="./js/velocity.min.js"></script>
+  <script src="./js/velocity.ui.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
 </html>
