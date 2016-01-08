@@ -186,3 +186,10 @@ a:hover {
   top: 80px;
   left: -80px;
 }
+
+#desk {
+  position: absolute;
+  z-index: 6;
+  top: 145px;
+  left: -120px;
+}
