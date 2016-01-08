@@ -3,6 +3,7 @@ var part = document.getElementsByClassName("part");
 var upperBody = document.querySelectorAll(".upperbody");
 var lightGlare = document.querySelectorAll("#glare");
 var light = document.querySelectorAll(".light");
+var monitor = document.querySelectorAll("#monitor");
 
 /////////////Animation Data
 var thingsToSay = [
@@ -76,6 +77,7 @@ function delay(what, duration) {
 Velocity(upperBody, { "margin-top": "5"}, { loop: true, duration: 2000 });
 Velocity(light, { "rotateZ": "3deg"}, { loop: true, duration: 2000 });
 Velocity(lightGlare, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
+Velocity(monitor, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
 
 say(thingsToSay[0], "content", 30);
 say(thingsToSay[1], "nav", 100, 3000);
