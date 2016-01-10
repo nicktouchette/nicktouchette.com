@@ -26,10 +26,10 @@ var drink = [
   { e: can, p: { translateY: "-=60px", translateX: "+=10", rotateZ: "+=20"}, o: {duration: 200, sequenceQueue: false} },
   { e: can, p: "reverse" , o: {delay: 1000, duration: 200} },
   { e: part.armright, p: "reverse", o: { duration: 200, sequenceQueue: false} },
-  { e: can, p: { translateY: "+=60", translateX: "-=8", rotateZ: "-=35"}, o: {duration: 200} },
+  { e: can, p: { translateY: "intial", translateX: "initial", rotateZ: "initial"}, o: {duration: 200} },
   { e: part.armrightfront, p: { rotateZ: "-=65" }, o: { duration: 200, sequenceQueue: false} },
-  { e: part.armrightfront, p: { rotateZ: "+=40"}, o: { duration: 200} },
-  { e: part.armright, p: { rotateZ: "-=32"}, o: { duration: 200, sequenceQueue: false} },
+  { e: part.armrightfront, p: { rotateZ: "initial"}, o: { duration: 200} },
+  { e: part.armright, p: { rotateZ: "initial"}, o: { duration: 200, sequenceQueue: false} },
 ];
 
 function raiseHead() {
