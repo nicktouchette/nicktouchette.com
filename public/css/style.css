@@ -45,6 +45,7 @@ a:hover {
   left: 62%;
   width: 275px;
   height: 400px;
+  transform: rotate(3deg);
 }
 
 .light img {

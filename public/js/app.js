@@ -1,10 +1,33 @@
+TweenLite.defaultEase = Power0.easeNone;
+
 /////////////Element Query Code
-var part = document.getElementsByClassName("part");
-var upperBody = document.querySelectorAll(".upperbody");
-var lightGlare = document.querySelectorAll("#glare");
+//BY ID
+var bulb = document.getElementById("bulb");
+var lightGlare = document.getElementById("glare");
+var robot = document.getElementById("robot");
+var head = document.getElementById("head");
+var armLeft = document.getElementById("armleft");
+var armLeftBicep = document.getElementById("armleftbicep");
+var armLeftFront = document.getElementById("armleftfront");
+var armRight = document.getElementById("armright");
+var armRightBicep = document.getElementById("armrightbicep");
+var armRightFront = document.getElementById("armrightfront");
+var torsoTop = document.getElementById("torsotop");
+var torsoDown = document.getElementById("torsodown");
+var leg = document.getElementById("leg");
+var wheel = document.getElementById("wheel");
+var keyboard = document.getElementById("keyboard");
+var monitor = document.getElementById("monitor");
+var desk = document.getElementById("desk");
+var cans = document.getElementById("cans");
+var can = document.getElementById("can");
+
+//DOM content
+var content = document.getElementById("content");
+var nav = document.getElementById("nav");
+
+//BY CLASS
 var light = document.querySelectorAll(".light");
-var monitor = document.querySelectorAll("#monitor");
-var body = document.getElementsByTagName("body");
 
 /////////////Animation Data
 var thingsToSay = [
@@ -12,32 +35,24 @@ var thingsToSay = [
   "<ul><li><a href=#>About</a></li><li><a href=#>Projects</a></li><li><a href=#>Contact</a></li></ul>"
 ];
 
-var typing = [
-  { e: part.armleftfront, p: { rotateZ: ["0deg", "15deg"] }, o: { loop: true, duration: 80 }},
-  { e: part.armrightfront, p: { rotateZ: ["15deg", "0deg"] }, o: { loop: true, duration: 80, sequenceQueue: false }}
-];
+var typing = new TimelineMax({repeat: -1, yoyo: true, paused: true});
+typing.to(armLeftFront, 0.05, {rotation: 15})
+      .to(armRightFront, 0.05, {rotation: -15});
 
-var drink = [
-  { e: part.armright, p: { rotateZ: "+=32"}, o: { duration: 200} },
-  { e: part.armrightfront, p: { rotateZ: "-=40"}, o: { duration: 200, sequenceQueue: false} },
-  { e: part.armrightfront, p: { rotateZ: "+=65" }, o: { duration: 200} },
-  { e: can, p: { translateY: "-=60", translateX: "+=8", rotateZ: "+=35"}, o: {duration: 200, sequenceQueue: false} },
-  { e: part.armright, p: { rotateZ: "+=42", scaleY: "-=.2"}, o: { duration: 200} },
-  { e: can, p: { translateY: "-=60px", translateX: "+=10", rotateZ: "+=20"}, o: {duration: 200, sequenceQueue: false} },
-  { e: can, p: "reverse" , o: {delay: 1000, duration: 200} },
-  { e: part.armright, p: { rotateZ: "-=42", scaleY: "+=.2" }, o: { duration: 200, sequenceQueue: false} },
-  { e: can, p: { translateY: "intial", translateX: "initial", rotateZ: "initial"}, o: {duration: 200} },
-  { e: part.armrightfront, p: { rotateZ: "-=65" }, o: { duration: 200, sequenceQueue: false} },
-  { e: part.armrightfront, p: { rotateZ: "initial"}, o: { duration: 200} },
-  { e: part.armright, p: { rotateZ: "initial"}, o: { duration: 200, sequenceQueue: false} },
-];
+var drink = new TimelineMax({onComplete: function(){this.reverse(0);}, paused: true});
+drink.to(armRight, 0.2, {rotation: 32})
+     .to(armRightFront, 0.2, {rotation: -45}, 0)
+     .to(armRightFront, 0.2, {rotation: "+=65"})
+     .to(can, 0.2, {y: "-=60", x: "+=8", rotation: "+=35"}, 0.2)
+     .to(armRight, 0.2, {rotation: "+=42,", scaleY: "-=0.2"})
+     .to(can, 0.2, {x: "+=10", y: "-=60", rotation: "+=20"}, 0.4);
 
 function raiseHead() {
-  part.head.setAttribute('src','./img/robot/robot-head-up.png');
+  head.setAttribute('src','./img/robot/robot-head-up.png');
 }
 
 function lowerHead() {
-  part.head.setAttribute('src','./img/robot/robot-head-down.png');
+  head.setAttribute('src','./img/robot/robot-head-down.png');
 }
 
 function say(what, where, speed, delay) {
@@ -47,11 +62,10 @@ function say(what, where, speed, delay) {
     var letterID = 0;
     var charArray = what.split('');
     var insideElement = false;
-    where = document.getElementById(where);
     delay = delay || 0;
 
     // BEGIN
-    Velocity.RunSequence(typing);
+    typing.play();
     lowerHead();
 
     // Run line parser to print html to DOM
@@ -77,8 +91,7 @@ function say(what, where, speed, delay) {
         }
       } else {
         // COMPLETE
-        Velocity(part.armrightfront, "stop");
-        Velocity(part.armleftfront, "stop");
+        typing.pause();
         raiseHead();
       }
     }
@@ -90,15 +103,16 @@ function delay(what, duration) {
 }
 
 /////////////Timeline Code
-Velocity(light, { "rotateZ": ["3deg", "-3deg"]}, { loop: true, duration: 2000 });
-Velocity(upperBody, { "margin-top": "5"}, { loop: true, duration: 2000 });
-Velocity(lightGlare, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
-Velocity(monitor, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
+TweenMax.to(light, 3, { rotation: "-3", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
-say(thingsToSay[0], "content", 30);
-say(thingsToSay[1], "nav", 100, 3000);
+TweenMax.to([torsoTop, torsoDown, head, armLeft, armRight], 2, { marginTop: 5, yoyo: true, repeat: -1, ease: Power1.easeInOut });
+TweenMax.to(lightGlare, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
+TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
+
+say(thingsToSay[0], content, 30);
+say(thingsToSay[1], nav, 100, 3000);
 setInterval(temporary, 10000);
 
 function temporary() {
-  Velocity.RunSequence(drink);
+  drink.play();
 }
