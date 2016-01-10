@@ -39,7 +39,7 @@ var typing = new TimelineMax({repeat: -1, yoyo: true, paused: true});
 typing.to(armLeftFront, 0.05, {rotation: 15})
       .to(armRightFront, 0.05, {rotation: -15});
 
-var drink = new TimelineMax({onComplete: function(){this.reverse(0);}, paused: true});
+var drink = new TimelineMax({onComplete: function(){this.reverse(0).delay(1);}, paused: true});
 drink.to(armRight, 0.2, {rotation: 32})
      .to(armRightFront, 0.2, {rotation: -45}, 0)
      .to(armRightFront, 0.2, {rotation: "+=65"})
