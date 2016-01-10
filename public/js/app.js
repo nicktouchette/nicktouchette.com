@@ -4,6 +4,7 @@ var upperBody = document.querySelectorAll(".upperbody");
 var lightGlare = document.querySelectorAll("#glare");
 var light = document.querySelectorAll(".light");
 var monitor = document.querySelectorAll("#monitor");
+var body = document.getElementsByTagName("body");
 
 /////////////Animation Data
 var thingsToSay = [
@@ -14,6 +15,21 @@ var thingsToSay = [
 var typing = [
   { e: part.armleftfront, p: { rotateZ: ["0deg", "15deg"] }, o: { loop: true, duration: 80 }},
   { e: part.armrightfront, p: { rotateZ: ["15deg", "0deg"] }, o: { loop: true, duration: 80, sequenceQueue: false }}
+];
+
+var drink = [
+  { e: part.armright, p: { rotateZ: "+=32"}, o: { duration: 200} },
+  { e: part.armrightfront, p: { rotateZ: "-=40"}, o: { duration: 200, sequenceQueue: false} },
+  { e: part.armrightfront, p: { rotateZ: "+=65" }, o: { duration: 200} },
+  { e: can, p: { translateY: "-=60", translateX: "+=8", rotateZ: "+=35"}, o: {duration: 200, sequenceQueue: false} },
+  { e: part.armright, p: { rotateZ: "+=42", scaleY: "-=.2"}, o: { duration: 200} },
+  { e: can, p: { translateY: "-=60px", translateX: "+=10", rotateZ: "+=20"}, o: {duration: 200, sequenceQueue: false} },
+  { e: can, p: "reverse" , o: {delay: 1000, duration: 200} },
+  { e: part.armright, p: "reverse", o: { duration: 200, sequenceQueue: false} },
+  { e: can, p: { translateY: "+=60", translateX: "-=8", rotateZ: "-=35"}, o: {duration: 200} },
+  { e: part.armrightfront, p: { rotateZ: "-=65" }, o: { duration: 200, sequenceQueue: false} },
+  { e: part.armrightfront, p: { rotateZ: "+=40"}, o: { duration: 200} },
+  { e: part.armright, p: { rotateZ: "-=32"}, o: { duration: 200, sequenceQueue: false} },
 ];
 
 function raiseHead() {
@@ -74,10 +90,15 @@ function delay(what, duration) {
 }
 
 /////////////Timeline Code
+Velocity(light, { "rotateZ": ["3deg", "-3deg"]}, { loop: true, duration: 2000 });
 Velocity(upperBody, { "margin-top": "5"}, { loop: true, duration: 2000 });
-Velocity(light, { "rotateZ": "3deg"}, { loop: true, duration: 2000 });
 Velocity(lightGlare, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
 Velocity(monitor, { "opacity": ".95"}, { easing: "easeInOutBounce", loop: true, duration: 200 });
 
 say(thingsToSay[0], "content", 30);
 say(thingsToSay[1], "nav", 100, 3000);
+setInterval(temporary, 10000);
+
+function temporary() {
+  Velocity.RunSequence(drink);
+}
