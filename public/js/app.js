@@ -25,7 +25,7 @@ var drink = [
   { e: part.armright, p: { rotateZ: "+=42", scaleY: "-=.2"}, o: { duration: 200} },
   { e: can, p: { translateY: "-=60px", translateX: "+=10", rotateZ: "+=20"}, o: {duration: 200, sequenceQueue: false} },
   { e: can, p: "reverse" , o: {delay: 1000, duration: 200} },
-  { e: part.armright, p: "reverse", o: { duration: 200, sequenceQueue: false} },
+  { e: part.armright, p: { rotateZ: "-=42", scaleY: "initial" }, o: { duration: 200, sequenceQueue: false} },
   { e: can, p: { translateY: "intial", translateX: "initial", rotateZ: "initial"}, o: {duration: 200} },
   { e: part.armrightfront, p: { rotateZ: "-=65" }, o: { duration: 200, sequenceQueue: false} },
   { e: part.armrightfront, p: { rotateZ: "initial"}, o: { duration: 200} },
