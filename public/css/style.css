@@ -23,6 +23,7 @@ body {
   height: 100vh;
   color: white;
   font-family: 'silkscreennormal', sans-serif;
+
 }
 
 a, a:visited {
@@ -55,7 +56,6 @@ a:hover {
 #nav {
   position: absolute;
   font-size: 40px;
-  width: 50%;
   top: 55%;
   margin-left: 55px;
 }
@@ -220,4 +220,12 @@ a:hover {
   width: 30px;
   top: 200px;
   left: 30px;
+}
+
+#eyelids {
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+  left: 65px;
+  top: 15px;
 }

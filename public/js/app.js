@@ -49,10 +49,12 @@ drink.to(armRight, 0.2, {rotation: 32}, "start")
 
 function raiseHead() {
   head.setAttribute('src','./img/robot/robot-head-up.png');
+  eyelids.setAttribute('src','./img/robot/eyelidsup.png');
 }
 
 function lowerHead() {
   head.setAttribute('src','./img/robot/robot-head-down.png');
+  eyelids.setAttribute('src','./img/robot/eyelidsdown.png');
 }
 
 function say(what, where, speed, delay) {
@@ -103,14 +105,20 @@ function delay(what, duration) {
 }
 
 ///////////Timeline Code
-TweenMax.to(light, 3, { rotation: "-3", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
-TweenMax.to([torsoTop, torsoDown, head, armLeft, armRight], 2, { marginTop: 5, yoyo: true, repeat: -1, ease: Power1.easeInOut });
-TweenMax.to(lightGlare, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
-TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
+function intro() {
+  TweenMax.to(light, 3, { rotation: "-3", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
-say(thingsToSay[0], content, 30);
-say(thingsToSay[1], nav, 100, 3000);
+  TweenMax.to([torsoTop, torsoDown, head, armLeft, armRight, eyelids], 2, { marginTop: 5, yoyo: true, repeat: -1, ease: Power1.easeInOut });
+  TweenMax.to(lightGlare, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
+  TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
+  TweenMax.from(eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
+
+  say(thingsToSay[0], content, 30);
+  say(thingsToSay[1], nav, 100, 3000);
+}
+
+intro();
 
 var coffeeBreak = new TimelineMax({repeat: -1});
 coffeeBreak.add(drink.play(), 10);
