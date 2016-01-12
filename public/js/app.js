@@ -21,13 +21,11 @@ var monitor = document.getElementById("monitor");
 var desk = document.getElementById("desk");
 var cans = document.getElementById("cans");
 var can = document.getElementById("can");
+var light = document.getElementById("light");
 
 //DOM content
 var content = document.getElementById("content");
 var nav = document.getElementById("nav");
-
-//BY CLASS
-var light = document.querySelectorAll(".light");
 
 /////////////Animation Data
 var thingsToSay = [
