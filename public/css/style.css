@@ -207,3 +207,17 @@ a:hover {
   left: 65px;
   top: 15px;
 }
+
+#antennaright {
+  transform-origin: 5px 44px;
+  z-index: 10;
+  left: 128px;
+  top: 38px;
+}
+
+#antennaleft {
+  transform-origin: 5px 44px;
+  z-index: 9;
+  left: 86px;
+  top: 19px;
+}

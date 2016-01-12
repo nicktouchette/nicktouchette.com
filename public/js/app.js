@@ -22,6 +22,8 @@ var desk = document.getElementById("desk");
 var cans = document.getElementById("cans");
 var can = document.getElementById("can");
 var light = document.getElementById("light");
+var antennaleft = document.getElementById("antennaleft");
+var antennaright = document.getElementById("antennaright");
 
 //DOM content
 var content = document.getElementById("content");
@@ -44,6 +46,10 @@ drink.to(armRight, 0.2, {rotation: 32}, "start")
      .to(can, 0.2, {y: "-=60", x: "+=8", rotation: "+=35"}, "lift")
      .to(armRight, 0.2, {rotation: "+=42,", scaleY: "-=0.2"}, "liftmore")
      .to(can, 0.2, {x: "+=10", y: "-=60", rotation: "+=20"}, "liftmore");
+
+var antennaflutter = new TimelineMax({repeat: 3, yoyo: true, paused: true});
+antennaflutter.to(antennaleft, 0.05, {rotation: 15})
+              .to(antennaright, 0.05, {rotation: -15});
 
 function raiseHead() {
   head.setAttribute('src','./img/robot/robot-head-up.png');
@@ -107,7 +113,7 @@ function delay(what, duration) {
 function intro() {
   TweenMax.to(light, 3, { rotation: "-3", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
-  TweenMax.to([torsoTop, torsoDown, head, armLeft, armRight, eyelids], 2, { marginTop: 5, yoyo: true, repeat: -1, ease: Power1.easeInOut });
+  TweenMax.to([torsoTop, torsoDown, head, armLeft, armRight, eyelids, antennaright, antennaleft], 2, { marginTop: 5, yoyo: true, repeat: -1, ease: Power1.easeInOut });
   TweenMax.to(lightGlare, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
   TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
   TweenMax.from(eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
@@ -119,4 +125,5 @@ function intro() {
 intro();
 
 var coffeeBreak = new TimelineMax({repeat: -1});
-coffeeBreak.add(drink.play(), 10);
+coffeeBreak.add(drink.play(), 15)
+           .add(antennaflutter.play(), 6);
