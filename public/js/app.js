@@ -27,15 +27,9 @@ var antennaleft = document.getElementById("antennaleft");
 var antennaright = document.getElementById("antennaright");
 
 //DOM content
-var content = document.getElementById("content");
-var nav = document.getElementById("nav");
+var divs = document.getElementsByTagName( 'div' );
 
-/////////////Animation Data
-var thingsToSay = [
-  "<h1>Nick Touchette</h1><h2>Full Stack<br/>Web<br/>Developer</h2>",
-  "<ul><li><a href=#>About</a></li><li><a href=#>Projects</a></li><li><a href=#>Contact</a></li></ul>"
-];
-
+// Animation Data
 var typing = new TimelineMax({repeat: -1, yoyo: true, paused: true});
 typing.to(armLeftFront, 0.05, {rotation: 15})
       .to(armRightFront, 0.05, {rotation: -15});
@@ -63,13 +57,17 @@ function lowerHead() {
   eyelids.setAttribute('src','./img/robot/eyelidsdown.png');
 }
 
-function say(what, where, speed, delay) {
+function say(what, speed, delay) {
   setTimeout(function () {
     var builtHtml = "";
     var arrayPos = 0;
     var letterID = 0;
-    var charArray = what.split('');
     var insideElement = false;
+    var location = what;
+    what = what.innerHTML;
+    location.innerHTML = "";
+    location.style.display = "inline";
+    var charArray = what.split('');
     delay = delay || 0;
 
     // BEGIN
@@ -83,7 +81,7 @@ function say(what, where, speed, delay) {
       if (letterID < what.length) {
         var letter = charArray.shift();
         builtHtml += letter;
-        where.innerHTML = builtHtml;
+        location.innerHTML = builtHtml;
         letterID++;
 
         if (letter === '<') {
@@ -92,7 +90,7 @@ function say(what, where, speed, delay) {
           insideElement = false;
         }
 
-        if (!insideElement) {
+        if (!insideElement && letter != " ") {
           setTimeout(repeat, speed);
         } else {
           repeat();
@@ -111,7 +109,6 @@ function delay(what, duration) {
 }
 
 ///////////Timeline Code
-
 function intro() {
   TweenMax.to(light, 3, { rotation: "-3", yoyo: true, repeat: -1, ease: Power1.easeInOut });
 
@@ -120,8 +117,8 @@ function intro() {
   TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
   TweenMax.from(eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
 
-  say(thingsToSay[0], content, 30);
-  say(thingsToSay[1], nav, 100, 3000);
+  say(divs.content, 30);
+  say(divs.nav, 100, 3000);
 }
 
 intro();

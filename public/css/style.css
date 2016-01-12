@@ -35,6 +35,7 @@ a:hover {
 }
 
 #nav {
+  display: none;
   position: absolute;
   font-size: 40px;
   top: 55%;
@@ -47,6 +48,7 @@ a:hover {
 }
 
 #content {
+  display: none;
   position: absolute;
   font-size: 38px;
   top: 22%;
