@@ -21,6 +21,7 @@ var monitor = document.getElementById("monitor");
 var desk = document.getElementById("desk");
 var cans = document.getElementById("cans");
 var can = document.getElementById("can");
+var candrink = document.getElementById("candrink");
 var light = document.getElementById("light");
 var antennaleft = document.getElementById("antennaleft");
 var antennaright = document.getElementById("antennaright");
@@ -43,9 +44,10 @@ var drink = new TimelineMax({repeatDelay: 1, repeat: 1, yoyo:true, paused:true})
 drink.to(armRight, 0.2, {rotation: 32}, "start")
      .to(armRightFront, 0.2, {rotation: -45}, "start")
      .to(armRightFront, 0.2, {rotation: "+=65"}, "lift")
-     .to(can, 0.2, {y: "-=60", x: "+=8", rotation: "+=35"}, "lift")
+     .to([can, candrink], 0.2, {y: "-=60", x: "+=8", rotation: "+=35"}, "lift")
      .to(armRight, 0.2, {rotation: "+=42,", scaleY: "-=0.2"}, "liftmore")
-     .to(can, 0.2, {x: "+=10", y: "-=60", rotation: "+=20"}, "liftmore");
+     .to(candrink, 0.2, { opacity: 1}, "liftmore")
+     .to([can, candrink], 0.2, {x: "+=10", y: "-=60", rotation: "+=20"}, "liftmore");
 
 var antennaflutter = new TimelineMax({repeat: 3, yoyo: true, paused: true});
 antennaflutter.to(antennaleft, 0.05, {rotation: 15})

@@ -194,11 +194,15 @@ a:hover {
   left: 160px;
 }
 
-#can {
+#can, #candrink {
   z-index: 12;
   width: 30px;
   top: 200px;
   left: 30px;
+}
+
+#candrink {
+  opacity: 0;
 }
 
 #eyelids {
