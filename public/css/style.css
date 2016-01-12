@@ -35,24 +35,6 @@ a:hover {
   color: white;
 }
 
-#scene {
-  position: absolute;
-  width: 100%;
-}
-
-.light {
-  position: absolute;
-  transform-origin: 137px 0px;
-  left: 62%;
-  width: 275px;
-  height: 400px;
-  transform: rotate(3deg);
-}
-
-.light img {
-  position: absolute;
-}
-
 #nav {
   position: absolute;
   font-size: 40px;
@@ -63,29 +45,6 @@ a:hover {
 #nav ul {
   list-style: none;
   width: 100%;
-}
-
-/*#nav ul li{
-  float: left;
-  min-width: 33.334%;
-  text-align: center;
-}
-
-#nav ul li a {
-  display: block;
-  width: 100%;
-}*/
-
-#bulb {
-  z-index: -1;
-  height: 140px;
-  left: 120px;
-  opacity: 1;
-}
-
-#glare {
-  top: 115px;
-  left: -5px;
 }
 
 #content {
@@ -102,17 +61,39 @@ a:hover {
   left: 9999px;
 }
 
-#robot {
+#container {
   position: absolute;
-  width: 200px;
-  height: 284px;
-  margin: 0 auto;
-  left: 54%;
-  top: 25%;
+  width: 100%;
+  height: 100%;
 }
 
-#robot .parts img {
+#container * {
   position: absolute;
+}
+
+.parts, .items {
+  top: 25%;
+  left: 54%;
+}
+
+.light {
+  transform-origin: 137px 0px;
+  left: 62%;
+  width: 275px;
+  height: 400px;
+  transform: rotate(3deg);
+}
+
+#bulb {
+  z-index: -1;
+  height: 140px;
+  left: 120px;
+  opacity: 1;
+}
+
+#glare {
+  top: 115px;
+  left: -5px;
 }
 
 #head {
@@ -123,7 +104,6 @@ a:hover {
 
 #armleft {
   transform-origin: 60px 0px;
-  position: absolute;
   left: 18px;
   top: 100px;
   width: 80px;
@@ -133,7 +113,6 @@ a:hover {
 #armleftbicep {
   z-index: 8;
   left: 35px;
-  /*top: 100px;*/
 }
 
 #armleftfront {
@@ -189,33 +168,28 @@ a:hover {
 }
 
 #keyboard {
-  position: absolute;
   z-index: 7;
   top: 185px;
   left: -10px;
 }
 #monitor {
-  position: absolute;
   z-index: 12;
   top: 80px;
   left: -80px;
 }
 
 #desk {
-  position: absolute;
   z-index: 6;
   top: 145px;
   left: -120px;
 }
 
 #cans {
-  position: absolute;
   top: 120px;
   left: 160px;
 }
 
 #can {
-  position: absolute;
   z-index: 12;
   width: 30px;
   top: 200px;
@@ -223,7 +197,6 @@ a:hover {
 }
 
 #eyelids {
-  position: absolute;
   opacity: 0;
   z-index: 10;
   left: 65px;
