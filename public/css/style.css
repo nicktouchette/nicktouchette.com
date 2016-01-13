@@ -38,6 +38,14 @@ a:hover {
   color: white;
 }
 
+#light, .robot, .items {
+  position: fixed;
+}
+
+#container * {
+  position: absolute;
+}
+
 #projects {
   display: none;
   position: absolute;
@@ -52,7 +60,6 @@ a:hover {
 #nav {
   display: none;
   font-size: 40px;
-  top: 55%;
   margin-top: 25px;
 }
 
@@ -69,7 +76,6 @@ a:hover {
 #content {
   display: none;
   font-size: 38px;
-  top: 22%;
   letter-spacing: -5px;
 }
 
@@ -79,18 +85,12 @@ a:hover {
   left: 9999px;
 }
 
-#scene {
-  z-index: -1;
-  position: fixed;
-  width: 100%;
-  height: 100%;
+.robot {
+  width: 200px;
+  height: 300px;
 }
 
-#container * {
-  position: absolute;
-}
-
-.parts, .items {
+.robot, .items {
   top: 25%;
   left: 54%;
 }
@@ -104,7 +104,6 @@ a:hover {
 }
 
 #bulb {
-  z-index: -1;
   height: 140px;
   left: 120px;
   opacity: 1;
@@ -116,7 +115,6 @@ a:hover {
 }
 
 #head {
-  z-index: 10;
   left: 65px;
   top: 15px;
 }
@@ -130,20 +128,16 @@ a:hover {
 }
 
 #armleftbicep {
-  z-index: 8;
   left: 35px;
 }
 
 #armleftfront {
   transform-origin: 41px 7px;
-  z-index: 8;
   top: 50px;
 }
 
 #armright {
   transform-origin: 50px 0px;
-  position: absolute;
-  z-index: 13;
   left: 85px;
   top: 120px;
   width: 90px;
@@ -151,7 +145,6 @@ a:hover {
 }
 
 #armrightbicep {
-  display: block;
   left: 48px;
   top: 0px;
 }
@@ -163,42 +156,36 @@ a:hover {
 }
 
 #torsotop {
-  z-index: 8;
   left: 65px;
   top: 70px;
 }
 
 #torsodown {
-  z-index: 7;
   left: 85px;
   top: 140px;
 }
 
 #leg {
-  z-index: 6;
   left: 100px;
   top: 160px;
 }
 
 #wheel {
-  z-index: 5;
   left: 90px;
   top: 210px;
 }
 
 #keyboard {
-  z-index: 7;
   top: 185px;
   left: -10px;
 }
+
 #monitor {
-  z-index: 12;
   top: 80px;
   left: -80px;
 }
 
 #desk {
-  z-index: 6;
   top: 145px;
   left: -120px;
 }
@@ -209,7 +196,6 @@ a:hover {
 }
 
 #can, #candrink {
-  z-index: 12;
   width: 30px;
   top: 200px;
   left: 30px;
@@ -221,21 +207,18 @@ a:hover {
 
 #eyelids {
   opacity: 0;
-  z-index: 10;
   left: 65px;
   top: 15px;
 }
 
 #antennaright {
   transform-origin: 5px 44px;
-  z-index: 10;
   left: 128px;
   top: 38px;
 }
 
 #antennaleft {
   transform-origin: 5px 44px;
-  z-index: 9;
   left: 86px;
   top: 19px;
 }
