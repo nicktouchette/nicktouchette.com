@@ -1,30 +1,32 @@
 TweenLite.defaultEase = Power0.easeNone;
 
-/////////////Element Query Code
-//BY ID
-var bulb = document.getElementById("bulb");
-var lightGlare = document.getElementById("glare");
-var robot = document.getElementById("robot");
-var head = document.getElementById("head");
-var armLeft = document.getElementById("armleft");
-var armLeftBicep = document.getElementById("armleftbicep");
-var armLeftFront = document.getElementById("armleftfront");
+/////////////Elements Query Code
+//BY Tag Name Img
+var imgs = document.getElementsByTagName("img");
+var bulb = imgs.bulb;
+var lightGlare = imgs.glare;
+var head = imgs.head;
+var armLeftBicep = imgs.armleftbicep;
+var armLeftFront = imgs.armleftfront;
+var armRightBicep = imgs.armrightbicep;
+var armRightFront = imgs.armrightfront;
+var torsoTop = imgs.torsotop;
+var torsoDown = imgs.torsodown;
+var leg = imgs.leg;
+var wheel = imgs.wheel;
+var keyboard = imgs.keyboard;
+var monitor = imgs.monitor;
+var desk = imgs.desk;
+var cans = imgs.cans;
+var can = imgs.can;
+var candrink = imgs.candrink;
+var antennaleft = imgs.antennaleft;
+var antennaright = imgs.antennaright;
+
+//By Div ID
 var armRight = document.getElementById("armright");
-var armRightBicep = document.getElementById("armrightbicep");
-var armRightFront = document.getElementById("armrightfront");
-var torsoTop = document.getElementById("torsotop");
-var torsoDown = document.getElementById("torsodown");
-var leg = document.getElementById("leg");
-var wheel = document.getElementById("wheel");
-var keyboard = document.getElementById("keyboard");
-var monitor = document.getElementById("monitor");
-var desk = document.getElementById("desk");
-var cans = document.getElementById("cans");
-var can = document.getElementById("can");
-var candrink = document.getElementById("candrink");
+var armLeft = document.getElementById("armleft");
 var light = document.getElementById("light");
-var antennaleft = document.getElementById("antennaleft");
-var antennaright = document.getElementById("antennaright");
 
 //DOM content
 var divs = document.getElementsByTagName( 'div' );
@@ -66,7 +68,7 @@ function say(what, speed, delay) {
     var location = what;
     what = what.innerHTML;
     location.innerHTML = "";
-    location.style.display = "inline";
+    location.style.display = "block";
     var charArray = what.split('');
     delay = delay || 0;
 
