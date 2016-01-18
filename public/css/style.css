@@ -38,29 +38,40 @@ a:hover {
   color: white;
 }
 
-#light, .robot, .items {
+#nav, #content, #about {
+  display: none;
+}
+
+#container {
   position: fixed;
+  left: 54%;
 }
 
 #container * {
   position: absolute;
 }
 
-#projects {
-  display: none;
-  position: absolute;
-  top: 70%;
+#robot, #items {
+  top: 200px;
 }
 
-#projects ul li {
+#about {
+  margin-bottom: 50px;
+}
+
+#project {
+  margin-bottom: 50px;
+}
+
+#project ul li {
   float: left;
   margin-right: 50px;
 }
 
 #nav {
-  display: none;
   font-size: 40px;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 #nav ul {
@@ -74,7 +85,6 @@ a:hover {
 }
 
 #content {
-  display: none;
   font-size: 38px;
   letter-spacing: -5px;
 }
@@ -85,19 +95,15 @@ a:hover {
   left: 9999px;
 }
 
-.robot {
+#robot {
   width: 200px;
   height: 300px;
 }
 
-.robot, .items {
-  top: 25%;
-  left: 54%;
-}
-
 #light {
   transform-origin: 137px 0px;
-  left: 62%;
+  left: 100px;
+  /*left: 62%;*/
   width: 275px;
   height: 400px;
   transform: rotate(3deg);

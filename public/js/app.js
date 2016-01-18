@@ -12,12 +12,12 @@ var armRightBicep = imgs.armrightbicep;
 var armRightFront = imgs.armrightfront;
 var torsoTop = imgs.torsotop;
 var torsoDown = imgs.torsodown;
-var leg = imgs.leg;
-var wheel = imgs.wheel;
-var keyboard = imgs.keyboard;
+// var leg = imgs.leg;
+// var wheel = imgs.wheel;
+// var keyboard = imgs.keyboard;
 var monitor = imgs.monitor;
-var desk = imgs.desk;
-var cans = imgs.cans;
+// var desk = imgs.desk;
+// var cans = imgs.cans;
 var can = imgs.can;
 var candrink = imgs.candrink;
 var antennaleft = imgs.antennaleft;
@@ -29,7 +29,7 @@ var armLeft = document.getElementById("armleft");
 var light = document.getElementById("light");
 
 //DOM content
-var divs = document.getElementsByTagName( 'div' );
+var divs = document.getElementsByTagName('div');
 
 // Animation Data
 var typing = new TimelineMax({repeat: -1, yoyo: true, paused: true});
@@ -121,6 +121,7 @@ function intro() {
 
   say(divs.content, 30);
   say(divs.nav, 100, 3000);
+  say(divs.about, 5, 8000);
 }
 
 intro();
