@@ -1,7 +1,7 @@
 {
-  "name": "OpenShift-Sample-App",
+  "name": "Nick-Touchette-com",
   "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "description": "Nick Touchette Portfolio",
   "keywords": [
     "OpenShift",
     "Node.js",
@@ -9,14 +9,14 @@
     "openshift"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Nick Touchette",
+    "email": "touchette@gmail.com",
+    "url": "http://www.nicktouchette.com/"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://www.nicktouchette.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/nicktouchette/nicktouchette.com"
   },
 
   "engines": {
