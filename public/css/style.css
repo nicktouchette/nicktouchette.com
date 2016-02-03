@@ -253,20 +253,26 @@ hr {
   margin: 5px 0px;
 }
 
-#project ul {
+.screens {
   margin-left: 260px;
 }
 
-#project ul li{
+.screens li {
   display: inline-block;
   margin-left: -260px;
+}
+
+.screencaptions li {
+  display: inline-block;
+  width: 32.3%;
   text-align: center;
 }
 
-#project ul li:first-child{
+.screencaptions li:first-child {
   text-align: left;
 }
 
-#project ul li:last-child{
+.screencaptions li:last-child {
   text-align: right;
 }
+
