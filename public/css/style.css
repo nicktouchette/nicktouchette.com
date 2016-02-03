@@ -249,6 +249,7 @@ a:hover {
 
 hr {
   border-style: solid;
+  opacity: .15;
   margin: 5px 0px;
 }
 
