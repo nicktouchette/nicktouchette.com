@@ -38,11 +38,11 @@ a:hover {
   color: white;
 }
 
-#nav, #content, #about {
+#nav, #content {
   display: none;
 }
 
-#container {
+#scene {
   position: fixed;
   left: 54%;
 }
@@ -61,11 +61,6 @@ a:hover {
 
 #project {
   margin-bottom: 50px;
-}
-
-#project ul li {
-  float: left;
-  margin-right: 50px;
 }
 
 #nav {
@@ -227,4 +222,50 @@ a:hover {
   transform-origin: 5px 44px;
   left: 86px;
   top: 19px;
+}
+
+#left > div {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#technologies {
+  width: 100%;
+}
+
+#technologies ul {
+  display: inline-block;
+  vertical-align: top;
+  width: 29%;
+}
+
+#technologies ul h3 {
+  margin-bottom: 10px;
+}
+
+#technologies ul:last-child {
+  width: 38%;
+}
+
+hr {
+  border-style: solid;
+  margin: 5px 0px;
+}
+
+#project ul {
+  margin-left: 260px;
+}
+
+#project ul li{
+  display: inline-block;
+  margin-left: -260px;
+  text-align: center;
+}
+
+#project ul li:first-child{
+  text-align: left;
+}
+
+#project ul li:last-child{
+  text-align: right;
 }

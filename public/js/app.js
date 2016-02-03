@@ -12,12 +12,9 @@ var armRightBicep = imgs.armrightbicep;
 var armRightFront = imgs.armrightfront;
 var torsoTop = imgs.torsotop;
 var torsoDown = imgs.torsodown;
-// var leg = imgs.leg;
-// var wheel = imgs.wheel;
-// var keyboard = imgs.keyboard;
+
 var monitor = imgs.monitor;
-// var desk = imgs.desk;
-// var cans = imgs.cans;
+
 var can = imgs.can;
 var candrink = imgs.candrink;
 var antennaleft = imgs.antennaleft;
@@ -120,8 +117,11 @@ function intro() {
   TweenMax.from(eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
 
   say(divs.content, 30);
-  say(divs.nav, 100, 3000);
-  say(divs.about, 5, 8000);
+  say(divs.nav, 50, 2000);
+  // say(divs.about, 5, 8000);
+  // say(divs.content, 1);
+  // say(divs.nav, 1);
+  // say(divs.about, 1);
 }
 
 intro();
