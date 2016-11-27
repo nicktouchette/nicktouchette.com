@@ -1,0 +1,87 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+        <pattern id="pattern-1" width="100%" height="199" preserveAspectRatio="none" patternUnits="userSpaceOnUse">
+            <image xlink:href="../monitor/scanlines.gif" width="100%" height="199" preserveAspectRatio="none"></image>
+        </pattern>
+    </defs>
+
+    <!-- top left corner: -->
+    <image xlink:href="../monitor/monitor_top-left.png" transform="translate(0,2)" viewBox="0 0 22 27" width="22px" height="27px"/>
+
+    <!-- bottom left corner: -->
+    <image xlink:href="../monitor/monitor_bottom-left.png" transform="translate(1,-29)" viewBox="0 0 21 27" width="21px" height="27px" x="0" y="100%"/>
+
+    <!-- top right corner: -->
+    <image xlink:href="../monitor/monitor_top-right.png" transform="translate(-26,2)" viewBox="0 0 26 27" width="26px" height="27px" x="100%" y="0" />
+
+    <!-- bottom right corner: -->
+    <image xlink:href="../monitor/monitor_bottom-right.png" transform="translate(-26,-29)" viewBox="0 0 26 26" width="26px" height="26px" x="100%" y="100%"/>
+
+    <!-- top edge: -->
+    <switch>
+        <foreignObject x="0" y="0" width="100%" height="29px">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="margin: 0 26px 0 22px;">
+                    <svg width="100%" height="29" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <image xlink:href="../monitor/monitor_top.png" preserveAspectRatio="none" width="100%" height="29" x="0" y="0" style="overflow:visible;"/>
+                    </svg>
+                </div>
+        </foreignObject>
+    </switch>
+
+    <!-- bottom edge: -->
+    <switch>
+        <foreignObject x="0" y="100%" width="100%" height="29px" transform="translate(0,-29)">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="margin: 0 26px 0 21px;">
+                        <svg width="100%" height="29" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <image xlink:href="../monitor/monitor_bottom.png" preserveAspectRatio="none" width="100%" height="29" x="0" y="0" style="overflow:visible;"/>
+                        </svg>
+                    </div>
+        </foreignObject>
+    </switch>
+
+    <!-- left edge: -->
+    <switch>
+        <foreignObject x="0" y="0" width="22px" height="100%" >
+                <div xmlns="http://www.w3.org/1999/xhtml" style="position: absolute; top: 29px; bottom: 29px; width: 22px;">
+                    <svg width="22px" height="100%" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <image xlink:href="../monitor/monitor_left.png" preserveAspectRatio="none" width="22" height="100%" x="0" y="0" />
+                </svg>
+                </div>
+        </foreignObject>
+    </switch>
+
+    <!-- right edge: -->
+
+    <switch>
+        <foreignObject x="0" y="0" width="100%" height="100%" >
+                <div xmlns="http://www.w3.org/1999/xhtml" style="position: absolute; top: 29px; bottom: 29px; right: -100%; width: 100%;margin-right: 26px;">
+                    <svg width="26" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMaxYMin meet">
+                    <image xlink:href="../monitor/monitor_right.png" preserveAspectRatio="none" width="26" height="100%" x="0" y="0"/>
+                </svg>
+                </div>
+        </foreignObject>
+    </switch>
+
+    <!-- center: -->
+
+    <switch>
+        <foreignObject x="0" y="0" width="100%" height="100%" >
+                <div xmlns="http://www.w3.org/1999/xhtml" style="position: absolute; top: 29px; bottom: 29px; left: 22px; right: 26px;">
+                    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveAspectRatio="none">
+                        <image xlink:href="../monitor/monitor_middle.png" preserveAspectRatio="none" width="100%" height="100%" x="0" y="0"/>
+                </svg>
+                </div>
+        </foreignObject>
+    </switch>
+
+    <switch>
+        <foreignObject x="0" y="0" width="100%" height="100%" >
+                <div xmlns="http://www.w3.org/1999/xhtml" style="position: absolute; top: 20px; bottom: 20px; left: 15px; right: 15px;">
+                    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 100 100" preserveAspectRatio="none">
+                        <rect id="scanlines" fill="url(#pattern-1)" opacity=".5" x="0" y="0" width="100%" height="100%" rx="8"></rect>
+                </svg>
+                </div>
+        </foreignObject>
+    </switch>
+</svg>

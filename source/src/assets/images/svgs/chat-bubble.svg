@@ -1,0 +1,9 @@
+<svg width="148px" height="97px" viewBox="0 0 148 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0,14.003131 C0,6.26941532 6.26484422,0 13.9901293,0 L134.009871,0 C141.736406,0 148,6.26439952 148,14.003131 L148,67.996869 C148,75.7305847 141.730947,82 134.008693,82 L131.417711,82 L119.453679,96.5172625 L121.886103,82 L13.9967476,82 C6.26655736,82 0,75.7356005 0,67.996869 L0,14.003131 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="148" height="96.5172625" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <use id="Rectangle" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" fill="#FAC732" fill-rule="evenodd" xlink:href="#path-1"></use>
+</svg>

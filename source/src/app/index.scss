@@ -3,12 +3,38 @@
 // bower:scss
 // endbower
 
+@font-face {
+    font-family: 'Bebas';
+    src: url('../assets/fonts/bebasneue_regular-webfont.eot');
+    src: url('../assets/fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/bebasneue_regular-webfont.woff') format('woff'),
+         url('../assets/fonts/bebasneue_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../assets/fonts/BebasNeueBold.eot');
+    src: url('../assets/fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/BebasNeueBold.woff') format('woff'),
+         url('../assets/fonts/BebasNeueBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
+  font-family: "Bebas", Arial, sans-serif;
   margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
 }
 
 hr {
