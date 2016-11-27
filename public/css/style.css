@@ -95,6 +95,12 @@ a:hover {
   height: 300px;
 }
 
+#window {
+  left: 195px;
+  top: 125px;
+  width: 150px;
+}
+
 #light {
   transform-origin: 137px 0px;
   left: 100px;
