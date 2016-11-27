@@ -3,13 +3,14 @@ const http         = require('http'),
       path         = require('path'),
       contentTypes = require('./utils/content-types'),
       sysInfo      = require('./utils/sys-info'),
+      finalhandler = require('finalhandler'),
+      serveStatic  = require('serve-static'),
       env          = process.env;
+
+let serve = serveStatic("./static");
 
 let server = http.createServer(function (req, res) {
   let url = req.url;
-  if (url == '/') {
-    url += 'index.html';
-  }
 
   // IMPORTANT: Your application HAS to respond to GET /health with status 200
   //            for OpenShift health monitoring
@@ -22,19 +23,21 @@ let server = http.createServer(function (req, res) {
     res.setHeader('Cache-Control', 'no-cache, no-store');
     res.end(JSON.stringify(sysInfo[url.slice(6)]()));
   } else {
-    fs.readFile('./static' + url, function (err, data) {
-      if (err) {
-        res.writeHead(404);
-        res.end('Not found');
-      } else {
-        let ext = path.extname(url).slice(1);
-        res.setHeader('Content-Type', contentTypes[ext]);
-        if (ext === 'html') {
-          res.setHeader('Cache-Control', 'no-cache, no-store');
-        }
-        res.end(data);
-      }
-    });
+    let done = finalhandler(req, res);
+    serve(req, res, done);
+    // fs.readFile('./static' + url, function (err, data) {
+    //   if (err) {
+    //     res.writeHead(404);
+    //     res.end('Not found');
+    //   } else {
+    //     let ext = path.extname(url).slice(1);
+    //     res.setHeader('Content-Type', contentTypes[ext]);
+    //     if (ext === 'html') {
+    //       res.setHeader('Cache-Control', 'no-cache, no-store');
+    //     }
+    //     res.end(data);
+    //   }
+    // });
   }
 });
 
