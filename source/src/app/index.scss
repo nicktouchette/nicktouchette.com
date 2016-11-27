@@ -5,27 +5,34 @@
 
 @font-face {
     font-family: 'Bebas';
-    src: url('../assets/fonts/bebasneue_regular-webfont.eot');
-    src: url('../assets/fonts/bebasneue_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/bebasneue_regular-webfont.woff') format('woff'),
-         url('../assets/fonts/bebasneue_regular-webfont.ttf') format('truetype');
+    src: url('../assets/fonts/BebasNeue Regular.eot');
+    src: url('../assets/fonts/BebasNeue Regular.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/BebasNeue Regular.woff2') format('woff2'),
+         url('../assets/fonts/BebasNeue Regular.woff') format('woff'),
+         url('../assets/fonts/BebasNeue Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Bebas';
-    src: url('../assets/fonts/BebasNeueBold.eot');
-    src: url('../assets/fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
-         url('../assets/fonts/BebasNeueBold.woff') format('woff'),
-         url('../assets/fonts/BebasNeueBold.ttf') format('truetype');
+    src: url('../assets/fonts/BebasNeue Bold.eot');
+    src: url('../assets/fonts/BebasNeue Bold.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/BebasNeue Bold.woff2') format('woff2'),
+         url('../assets/fonts/BebasNeue Bold.woff') format('woff'),
+         url('../assets/fonts/BebasNeue Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Bebas", Arial, sans-serif;
   margin: 0;
+  background-color: darkgrey;
 }
 
 a {
@@ -41,6 +48,114 @@ hr {
   clear: both;
 }
 
+button {
+  font-family: inherit;
+  outline: none;
+  background-color: transparent;
+  border-style: none;
+}
+
+input {
+  outline: none;
+}
+
+input[type='text'] {
+  font-family: inherit;
+  background: rgba(0,0,0,0.57);
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  outline-color: white;
+  outline: none;
+  color: white;
+  padding: 3px 5px;
+}
+
+input[type='submit'] {
+  font-family: inherit;
+  background: #1F201F;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  min-width: 100px;
+  padding-top: 3px;
+}
+
+.input-container {
+  color: white;
+  margin-top: 10px;
+
+  .label {
+    font-weight: bold;
+    font-size: 16px;
+    height: 15px;
+    margin: 0px 0px 0px 5px;
+  }
+}
+
+.title {
+  /* Rectangle: */
+  display: inline;
+  border-radius: 0 11px 11px 0;
+  background: #FFFFFF;
+  box-shadow: 6px 14px 29px -5px rgba(0,0,0,0.75);
+
+  /* Text: */
+  padding: 1px 12px 0px 8px;
+  font-weight: bold;
+  font-size: 24px;
+  color: #000000;
+  letter-spacing: 0px;
+}
+
+.menu-button {
+  color: white;
+
+  /* SVG */
+  & object {
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  /* Text */
+  & span {
+    display: inline;
+    vertical-align: top;
+    font-size: 24px;
+    letter-spacing: 0px;
+  }
+
+  &:hover {
+    color: green;
+  }
+}
+
+.project-preview {
+  position: relative;
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  width: 238px;
+  height: 55px;
+  background-color: #464F46;
+
+  /* No Hover Effect */
+  span {
+    display: block;
+    margin: 2px 5px;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.50);
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+}
 /* Do not remove the comments below. It's the markers used by gulp-inject to inject
    all your sass files automatically */
 // injector
