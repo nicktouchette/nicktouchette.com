@@ -120,6 +120,27 @@ input[type='submit'] {
   margin-bottom: 10px;
 }
 
+.header {
+  margin: 10px 0px;
+
+  h1 {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 38px;
+    color: #FAC732;
+    margin: 0px;
+  }
+
+  p {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 14px;
+    margin: 0px;
+  }
+}
+
 .chat-bubble {
   position: relative;
   border-radius: 14px;
