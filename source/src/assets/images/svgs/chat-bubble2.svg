@@ -1,9 +1,7 @@
-<svg width="271px" height="177px" viewBox="0 0 271 177" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <path d="M0,13.9907883 C0,6.26388927 6.26713167,0 13.9994782,0 L257.000522,0 C264.73222,0 271,6.26053945 271,13.9907883 L271,136.15786 C271,143.884759 264.727077,150.148649 256.995851,150.148649 L240.636484,150.148649 L240.636484,176.110076 L223.183337,150.148649 L14.003363,150.148649 C6.26951916,150.148649 0,143.888109 0,136.15786 L0,13.9907883 Z" id="path-1"></path>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="271" height="176.110076" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-    </defs>
-    <use id="Rectangle" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+<svg width="20px" height="30px" viewBox="221 147 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Chat-Pointer-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(221.000000, 147.000000)">
+        <polygon id="Inside" fill="#000000" points="17.7476196 0.993835449 17.6093617 22.6789138 3.1494751 0.993835449"></polygon>
+        <polygon id="Outside" fill="#FFFFFF" points="19.6364838 29.1100759 0.829966813 1.16771285 3.30216249 1.16771285 17.6344531 22.5661279 17.6344531 1.16771285 19.6364838 1.16771285"></polygon>
+    </g>
 </svg>
