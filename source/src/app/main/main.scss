@@ -6,4 +6,14 @@
   position: relative;
   padding: 15px;
   width: 321px;
+  height: 600px;
+
+  .chat-bubble.user {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+#scene {
+  z-index: -1;
 }

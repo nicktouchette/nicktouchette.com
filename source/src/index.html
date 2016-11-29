@@ -18,6 +18,8 @@
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/layerorder.css">
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -31,6 +33,14 @@
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
     <!-- endbower -->
     <!-- endbuild -->
+
+    <div class="preload-images">
+      <img src="./assets/images/robot/robot-head-down.png"/>
+      <img src="./assets/images/robot/robot-head-up.png"/>
+      <img src="./assets/images/robot/eyelidsdown.png"/>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
 
     <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->

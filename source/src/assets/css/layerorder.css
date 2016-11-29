@@ -1,0 +1,51 @@
+#scene {
+  z-index: -1;
+}
+#bulb {
+  z-index: -1;
+}
+#head {
+  z-index: 10;
+}
+#armleftbicep {
+  z-index: 8;
+}
+#armleftfront {
+  z-index: 8;
+}
+#armright {
+  z-index: 13;
+}
+#torsotop {
+  z-index: 8;
+}
+#torsodown {
+  z-index: 7;
+}
+#leg {
+  z-index: 6;
+}
+#wheel {
+  z-index: 5;
+}
+#keyboard {
+  z-index: 7;
+}
+#monitor {
+  z-index: 12;
+}
+#desk {
+  z-index: 6;
+}
+#can, #candrink {
+  z-index: 12;
+}
+#eyelids {
+  z-index: 10;
+}
+#antennaright {
+  z-index: 10;
+}
+#antennaleft {
+  z-index: 9;
+}
