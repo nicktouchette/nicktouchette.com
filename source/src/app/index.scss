@@ -47,6 +47,7 @@
   line-height: 1;
   color: white;
   font-size: 24pt;
+  display: inline-block;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -67,7 +68,7 @@
 body {
   font-family: "Bebas", Arial, sans-serif;
   margin: 0;
-  background-color: rgb(100,100,100);
+  background-color: black;
   font-size: 18px;
 }
 
@@ -95,13 +96,14 @@ input {
   outline: none;
 }
 
-input[type='text'] {
+input[type='text'], textarea {
   font-family: inherit;
   background: rgba(0,0,0,0.57);
   border: 1px solid #FFFFFF;
   border-radius: 8px;
   outline-color: white;
   outline: none;
+  max-width: 100%;
   color: white;
   padding: 3px 5px;
   font-size: 18px;
@@ -120,8 +122,17 @@ input[type='submit'] {
   margin-bottom: 10px;
 }
 
+.layout-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .header {
-  margin: 10px 0px;
+  margin-bottom: 10px;
+  margin-left: 5px;
 
   h1 {
     display: inline-block;
@@ -167,7 +178,7 @@ input[type='submit'] {
   &.user {
     border-width: 2px;
     background-color: black;
-    width: 271px;
+    width: 100%;
     height: auto;
     color: white;
 

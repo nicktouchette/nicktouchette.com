@@ -1,9 +1,19 @@
 #content-frame {
   position: relative;
-  width: 297px;
-  height: 401px;
+  display: inline-block;
 
-  .title {
-    margin-top: 20px;
+  .frame {
+    position: relative;
+    width: 297px;
+    height: 401px;
+
+    .title {
+      margin-top: 20px;
+    }
+  }
+
+  .menu-button {
+    position: absolute;
+    right: 10px;
   }
 }
