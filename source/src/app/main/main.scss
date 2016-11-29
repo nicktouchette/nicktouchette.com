@@ -5,15 +5,199 @@
 #ui {
   position: relative;
   padding: 15px;
-  width: 321px;
-  height: 600px;
+  width: 320px;
+  height: 512px;
 
   .chat-bubble.user {
     position: absolute;
+    z-index: 100;
     bottom: 0;
   }
 }
 
 #scene {
-  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+#container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  & * {
+    position: absolute;
+  }
+}
+
+#robot, #items {
+  top: 140px;
+}
+
+#robot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#blackout {
+  background-color: black;
+  top: 280px;
+  width: 100%;
+  height: 100px;
+}
+
+#items {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.preload-images {
+  position: absolute;
+  display: none;
+  left: 9999px;
+}
+
+
+#window {
+  right: 30px;
+  top: 125px;
+  width: 30%;
+}
+
+#light {
+  position: absolute;
+  transform-origin: 137px 0px;
+  top: 30px;
+  right: 0;
+  bottom: 35%;
+  width: 200px;
+  transform: rotate(3deg);
+}
+
+#bulb {
+  height: 36%;
+  right: 48%;
+  opacity: 1;
+}
+
+#glare {
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+}
+
+#head {
+  left: 65px;
+  top: 15px;
+}
+
+#armleft {
+  transform-origin: 60px 0px;
+  left: 18px;
+  top: 100px;
+  width: 80px;
+  height: 100px;
+}
+
+#armleftbicep {
+  left: 35px;
+}
+
+#armleftfront {
+  transform-origin: 41px 7px;
+  top: 50px;
+}
+
+#armright {
+  transform-origin: 50px 0px;
+  left: 85px;
+  top: 120px;
+  width: 90px;
+  height: 100px;
+}
+
+#armrightbicep {
+  left: 48px;
+  top: 0px;
+}
+
+#armrightfront {
+  transform-origin: 62px 9px;
+  display: block;
+  top: 68px;
+}
+
+#torsotop {
+  left: 65px;
+  top: 70px;
+}
+
+#torsodown {
+  left: 85px;
+  top: 140px;
+}
+
+#leg {
+  left: 100px;
+  top: 160px;
+}
+
+#wheel {
+  left: 90px;
+  top: 210px;
+}
+
+#keyboard {
+  top: 185px;
+  left: -10px;
+}
+
+#monitor {
+  top: 80px;
+  left: -80px;
+}
+
+#desk {
+  top: 145px;
+  left: -120px;
+}
+
+#cans {
+  top: 30%;
+  right: 10%;
+  width: 40%;
+}
+
+#can, #candrink {
+  width: 30px;
+  top: 200px;
+  left: 30px;
+}
+
+#candrink {
+  opacity: 0;
+}
+
+#eyelids {
+  opacity: 0;
+  left: 65px;
+  top: 15px;
+}
+
+#antennaright {
+  transform-origin: 5px 44px;
+  left: 128px;
+  top: 38px;
+}
+
+#antennaleft {
+  transform-origin: 5px 44px;
+  left: 86px;
+  top: 19px;
 }
