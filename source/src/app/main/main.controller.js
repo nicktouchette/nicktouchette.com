@@ -69,46 +69,26 @@
 
   function say(what, speed, delay) {
     setTimeout(function () {
-      var builtHtml = "";
-      var arrayPos = 0;
-      var letterID = 0;
-      var insideElement = false;
-      var location = what;
       what = what.innerHTML;
-      location.innerHTML = "";
-      location.style.display = "block";
-      var charArray = what.split('');
+      var numCharacters = what.split('').length;
+      speed = speed || 0;
       delay = delay || 0;
 
       // BEGIN
       typing.play();
       lowerHead();
+      repeat(numCharacters);
 
-      // Run line parser to print html to DOM
-      repeat();
-
-      function repeat() {
-        if (letterID < what.length) {
-          var letter = charArray.shift();
-          builtHtml += letter;
-          location.innerHTML = builtHtml;
-          letterID++;
-
-          if (letter === '<') {
-            insideElement = true;
-          } else if (letter === '>') {
-            insideElement = false;
-          }
-
-          if (!insideElement && letter != " ") {
-            setTimeout(repeat, speed);
-          } else {
-            repeat();
-          }
+      function repeat(count) {
+        if (count !== 0) {
+          setTimeout(function() {
+            repeat(count - 1);
+          }, speed);
         } else {
           // COMPLETE
           typing.pause();
           raiseHead();
+          divs['robot-chat'].className = 'show';
         }
       }
     }, delay);
@@ -127,7 +107,7 @@
     TweenMax.to(monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
     TweenMax.from(eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
 
-    say(document.querySelector('.chat-bubble.robot p'), 30);
+    say(document.querySelector('#robot-chat'), 5);
   }
 
   intro();

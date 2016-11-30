@@ -158,36 +158,53 @@ input[type='submit'] {
   border: 1px solid white;
   margin-bottom: 30px;
   z-index: 10;
+  opacity: 0;
+  transform-origin: right bottom;
 
   p, ul {
     margin: 5px;
   }
 
-  &.robot {
-    background-color: #FAC732;
-    width: 188px;
-    height: auto;
-    color: black;
-
-    object {
-      position: absolute;
-      bottom: -16px;
-      right: 10px;
-    }
+  &.show {
+    animation: chat-popup 0.5s;
+    opacity: 1;
   }
 
-  &.user {
-    border-width: 2px;
-    background-color: black;
-    width: 100%;
-    height: auto;
-    color: white;
+  @keyframes chat-popup {
+    0%   { opacity: 1; transform: scale(0); }
+    95%   { transform: scale(1.04, 1.04) }
+    100% { transform: scale(1, 1)}
+  }
+}
 
-    object {
-      position: absolute;
-      bottom: -29px;
-      right: 20px;
-    }
+#robot-chat {
+  @extend .chat-bubble;
+
+  background-color: #FAC732;
+  width: 188px;
+  height: auto;
+  color: black;
+
+  object {
+    position: absolute;
+    bottom: -16px;
+    right: 10px;
+  }
+}
+#user-chat {
+  @extend .chat-bubble;
+
+  border-width: 2px;
+  background-color: black;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  color: white;
+
+  object {
+    position: absolute;
+    bottom: -29px;
+    right: 20px;
   }
 }
 
