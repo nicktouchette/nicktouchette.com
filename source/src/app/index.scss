@@ -194,12 +194,16 @@ input[type='submit'] {
 #user-chat {
   @extend .chat-bubble;
 
+  position: absolute;
   border-width: 2px;
   background-color: black;
-  width: 100%;
   height: auto;
   opacity: 1;
   color: white;
+  z-index: 100;
+  bottom: 0;
+  right: 15px;
+  left: 15px;
 
   object {
     position: absolute;
