@@ -1,5 +1,12 @@
 #landing {
   background-color: black;
+  z-index: -1;
+}
+
+.chat-container {
+  position: absolute;
+  height: 102px;
+  width: 188px;
 }
 
 #ui {
@@ -16,6 +23,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 #container {
@@ -29,28 +37,21 @@
 }
 
 #robot, #items {
-  top: 140px;
+  left: 50px;
+  top: 180px;
 }
 
 #robot {
   position: absolute;
-  left: 0;
+  height: 300px;
+  width: 225px;
   right: 0;
-  bottom: 0;
-}
-
-#blackout {
-  background-color: black;
-  top: 180px;
-  width: 100%;
-  height: 100px;
 }
 
 #items {
   position: absolute;
-  left: 0;
   right: 0;
-  bottom: 0;
+  height: 367px;
 }
 
 .preload-images {
@@ -59,11 +60,10 @@
   left: 9999px;
 }
 
-
 #window {
   right: 30px;
   top: 125px;
-  width: 120px;
+  width: 130px;
 }
 
 #light {
@@ -71,7 +71,7 @@
   transform-origin: 137px 0px;
   opacity: 0.6;
   top: 0px;
-  right: 15px;
+  right: 35px;
   width: 200px;
   transform: rotate(3deg);
 }
@@ -79,7 +79,7 @@
 #bulb {
   height: 140px;
   right: 50%;
-  opacity: 0.5;
+  opacity: 0.9;
   transform: translate(50%);
 }
 
@@ -167,8 +167,9 @@
 }
 
 #cans {
-  top: 150px;
-  right: 10px;
+  top: 290px;
+  width: 100px;
+  right: 50px;
 }
 
 #can, #candrink {

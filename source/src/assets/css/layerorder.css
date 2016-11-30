@@ -46,3 +46,6 @@
 #antennaleft {
   z-index: 9;
 }
+#left {
+  z-index: 100;
+}

@@ -4,13 +4,15 @@
       h1 Nick Touchette
       p Full Stack #[br] Web Developer
 
-    #robot-chat.chat-bubble
-      object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble.svg')
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales, nisi eu dignissim facilisis, sem mi posuere.
-
+    .chat-container
+      #robot-chat
+        object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble.svg')
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales, nisi eu dignissim facilisis, sem mi posuere.
+        //- p Welcome
     #scene
       #container
         img#window(src='./assets/images/window.gif')
+        img#cans(src='./assets/images/canpile.png')
         #light
           img#bulb(src='./assets/images/lightbulb.png')
           img#glare(src='./assets/images/glare.png')
@@ -30,16 +32,13 @@
           img#eyelids(src='./assets/images/robot/eyelidsup.png')
           img#antennaright(src='./assets/images/robot/antenna.png')
         #items
-          #blackout
-          img#cans(src='./assets/images/canpile.png')
           img#desk(src='./assets/images/desk.png')
           img#keyboard(src='./assets/images/keyboard.png')
           img#can(src='./assets/images/can.png')
           img#candrink(src='./assets/images/candrink.png')
           img#monitor(src='./assets/images/monitor.png')
 
-
-    #user-chat.chat-bubble
+    #user-chat
       object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble2.svg')
       ul
         li Take the Tour
