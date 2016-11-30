@@ -5,12 +5,13 @@
 #ui {
   position: relative;
   padding: 15px;
-  width: 320px;
-  height: 512px;
+  width: 100%;
+  height: 100%;
 }
 
 #scene {
   position: absolute;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -40,7 +41,7 @@
 
 #blackout {
   background-color: black;
-  top: 280px;
+  top: 180px;
   width: 100%;
   height: 100px;
 }
@@ -62,29 +63,31 @@
 #window {
   right: 30px;
   top: 125px;
-  width: 30%;
+  width: 120px;
 }
 
 #light {
   position: absolute;
   transform-origin: 137px 0px;
-  top: 30px;
-  right: 0;
-  bottom: 35%;
+  opacity: 0.6;
+  top: 0px;
+  right: 15px;
   width: 200px;
   transform: rotate(3deg);
 }
 
 #bulb {
-  height: 36%;
-  right: 48%;
-  opacity: 1;
+  height: 140px;
+  right: 50%;
+  opacity: 0.5;
+  transform: translate(50%);
 }
 
 #glare {
-  width: 100%;
-  height: 70%;
-  bottom: 0;
+  width: 250px;
+  top: 120px;
+  right: 50%;
+  transform: translate(50%);
 }
 
 #head {
@@ -164,9 +167,8 @@
 }
 
 #cans {
-  top: 30%;
-  right: 10%;
-  width: 40%;
+  top: 150px;
+  right: 10px;
 }
 
 #can, #candrink {
