@@ -162,7 +162,6 @@ input[type='submit'] {
   z-index: 10;
   opacity: 0;
   transform-origin: right bottom;
-  max-height: 104px;
 
   p, ul {
     margin: 5px;
@@ -190,6 +189,7 @@ input[type='submit'] {
   color: black;
   line-height: 1.3em;
   bottom: -30px;
+  max-height: 104px;
 
   object {
     position: absolute;
@@ -210,6 +210,9 @@ input[type='submit'] {
   bottom: 0;
   right: 15px;
   left: 15px;
+  font-size: 34px;
+  line-height: 1em;
+  max-height: 370px;
 
   object {
     position: absolute;
@@ -352,11 +355,19 @@ input[type='submit'] {
 
 .container {
   position: absolute;
-  overflow: scroll;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+
+  & > [id] {
+    margin: 10px;
+
+    .title {
+      margin-left: -10px;
+    }
+  }
 }
 
 .center {

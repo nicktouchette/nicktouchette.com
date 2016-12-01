@@ -2,17 +2,16 @@
   background-color: black;
   margin: 0 auto;
   z-index: -1;
-  max-width: 440px;
+  max-width: 400px;
+  transition: 1s linear max-width;
+
+  &.single-screen {
+    max-width: 400px;
+  }
 
   @media (min-width: 1000px) {
-    max-width: 900px;
-
-    &.single-screen {
-      max-width: 440px;
-
-      #ui {
-        max-width: 440px;
-      }
+    &.not-home {
+      max-width: 900px;
     }
   }
 }
@@ -20,21 +19,20 @@
 #ui {
   position: relative;
   padding: 15px;
-  max-width: 440px;
+  max-width: 400px;
   height: 640px;
   top: 50vh;
   transform: translateY(-50%);
+  transition: 1s linear width;
 
   @media (min-width: 1000px) {
-    max-width: 400px;
     left: 0;
   }
 }
 
 #content-frame {
   position: absolute;
-  display: none;
-  opacity: 0;
+  opacity: 1;
   max-width: 476px;
   width: 100%;
   height: 100%;
@@ -43,6 +41,16 @@
   padding: 65px 0px 60px 0px;
   top: 50vh;
   transform: translateY(-50%);
+  right: 0;
+
+  .footer {
+    color: #333;
+    font-size: 0.75em;
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+  }
 
   .frame {
     position: relative;
@@ -59,13 +67,48 @@
     right: 10px;
   }
 
-  &.show {
-    display: inline-block;
-    opacity: 1;
+  // [ui-view] {
+  //   opacity: 0;
+  //   transition: 3s linear all;
+  // }
+
+  // [ui-view].ng-enter-active {
+  //   opacity: 1;
+  //   background-color: red;
+  // }
+
+  &.ng-hide-add, &.ng-hide-remove {
+    transition: all linear 0s;
+
+    .container {
+      opacity: 0;
+    }
+  }
+
+  &.ng-hide-remove-active {
+    opacity: 0;
+
+    animation: flicker 0.2s;
+    animation-delay: 1.5s;
+  }
+
+  &.ng-hide-add-active {
+    animation: flicker 0.2s;
+  }
+
+  @keyframes flicker {
+    0%   {opacity: .2;}
+    25%  {opacity: .2;}
+    50%  {opacity: .6;}
+    75%  {opacity: .2;}
+    88%  {opacity: .9;}
+    100% {opacity: .5;}
   }
 
   @media (min-width: 1000px) {
-    right: 0;
+    .menu-button {
+      display: none;
+    }
   }
 }
 
@@ -74,7 +117,6 @@
   height: 102px;
   width: 188px;
 }
-
 
 #scene {
   position: absolute;

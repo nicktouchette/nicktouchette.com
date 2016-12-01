@@ -1,4 +1,4 @@
-#landing.layout-full(ng-class='{"single-screen": vm.state.is("home")}')
+#landing.layout-full(ng-class='{"single-screen": vm.state.is("home"), "not-home": !vm.state.is("home")}')
   #ui
     .header
       h1 Nick Touchette
@@ -46,7 +46,7 @@
         li #[a(ui-sref='projects') Projects]
         li #[a(ui-sref='contact') Contact]
 
-  #content-frame(ng-class='{show: !vm.state.is("home")}')
+  #content-frame(ng-hide='vm.state.is("home")')
     .frame
       object(type='image/svg+xml', data='./assets/images/svgs/panel-frame.svg')
       .container(ui-view)
@@ -54,3 +54,5 @@
     button.menu-button
       object(type='image/svg+xml', data='./assets/images/svgs/chat-button.svg')
       span Menu
+
+    p.footer Built by Nick &bull; Sourcecode on Github
