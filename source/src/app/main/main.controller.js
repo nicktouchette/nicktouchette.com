@@ -6,9 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController() {
+  function MainController($state) {
     var vm = this;
 
+    vm.state = $state;
   TweenLite.defaultEase = Power0.easeNone;
 
   /////////////Elements Query Code

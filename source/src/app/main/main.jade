@@ -1,4 +1,4 @@
-#landing.layout-full
+#landing.layout-full(ng-class='{"single-screen": vm.state.is("home")}')
   #ui
     .header
       h1 Nick Touchette
@@ -42,6 +42,15 @@
       object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble2.svg')
       ul
         li Take the Tour
-        li #[a(ui-sref='content.about') About]
-        li #[a(ui-sref='content.projects') Projects]
-        li #[a(ui-sref='content.contact') Contact]
+        li #[a(ui-sref='about') About]
+        li #[a(ui-sref='projects') Projects]
+        li #[a(ui-sref='contact') Contact]
+
+  #content-frame(ng-class='{show: !vm.state.is("home")}')
+    .frame
+      object(type='image/svg+xml', data='./assets/images/svgs/panel-frame.svg')
+      .container(ui-view)
+
+    button.menu-button
+      object(type='image/svg+xml', data='./assets/images/svgs/chat-button.svg')
+      span Menu

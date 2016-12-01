@@ -14,22 +14,19 @@
         controller: 'MainController',
         controllerAs: 'vm'
       })
-      .state('content', {
-        abstract: true,
-        templateUrl: 'app/content/container.html',
-        controller: 'ContentController',
-        controllerAs: 'vm'
-      })
-      .state('content.projects', {
-        url: '/projects',
+      .state('projects', {
+        parent: 'home',
+        url: 'projects',
         templateUrl: 'app/content/projects.html'
       })
-      .state('content.about', {
-        url: '/about',
+      .state('about', {
+        parent: 'home',
+        url: 'about',
         templateUrl: 'app/content/about.html'
       })
-      .state('content.contact', {
-        url: '/contact',
+      .state('contact', {
+        parent: 'home',
+        url: 'contact',
         templateUrl: 'app/content/contact.html'
       })
       .state('styles', {
