@@ -135,12 +135,11 @@ input[type='submit'] {
 
 .header {
   margin-bottom: 18px;
-  margin-left: 5px;
 
   h1 {
-    display: inline-block;
+    display: inline;
     font-weight: normal;
-    font-size: 49px;
+    font-size: 2.5em;
     color: #FAC732;
     margin: 0px;
   }
@@ -148,9 +147,9 @@ input[type='submit'] {
   p {
     display: inline-block;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 1.1em;
     color: #FFFFFF;
-    line-height: 18px;
+    line-height: 0.9em;
     margin: 0px;
   }
 }
