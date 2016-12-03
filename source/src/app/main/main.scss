@@ -1,32 +1,46 @@
 #landing {
   background-color: black;
-  margin: 0 auto;
   z-index: -1;
+}
+
+#ui {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
   max-width: 400px;
+  transition: 1s linear width;
+}
+
+#content {
+  position: relative;
+  padding: 15px;
+
+  margin: 0 auto;
+  max-width: 400px;
+  height: 640px;
+  top: 50vh;
+  transform: translateY(-50%);
   transition: 1s linear max-width;
 
   &.single-screen {
     max-width: 400px;
   }
 
+  &.not-home #ui {
+    transition: 1s linear opacity;
+    opacity: 0;
+  }
+
   @media (min-width: 1000px) {
     &.not-home {
       max-width: 900px;
+
+      #ui {
+        opacity: 1;
+      }
     }
-  }
-}
-
-#ui {
-  position: relative;
-  padding: 15px;
-  max-width: 400px;
-  height: 640px;
-  top: 50vh;
-  transform: translateY(-50%);
-  transition: 1s linear width;
-
-  @media (min-width: 1000px) {
-    left: 0;
   }
 }
 
@@ -39,8 +53,8 @@
   max-height: 640px;
   z-index: 10;
   padding: 65px 0px 60px 0px;
-  top: 50vh;
-  transform: translateY(-50%);
+  bottom: 0;
+  top: 0;
   right: 0;
 
   .footer {
@@ -114,6 +128,8 @@
 
 .chat-container {
   position: absolute;
+  top: 80px;
+  left: 15px;
   height: 102px;
   width: 188px;
 }

@@ -10,5 +10,9 @@
     var vm = this;
 
     vm.state = $state;
+
+    vm.test = function() {
+      console.log("test");
+    };
   }
 })();

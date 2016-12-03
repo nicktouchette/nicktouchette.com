@@ -133,7 +133,8 @@ input[type='submit'] {
   z-index: -1;
 }
 
-.header {
+#header {
+  position: absolute;
   margin-bottom: 18px;
 
   h1 {

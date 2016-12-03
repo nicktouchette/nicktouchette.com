@@ -112,7 +112,7 @@
           TweenMax.to(robot.monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
           TweenMax.from(robot.eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
 
-          // say(document.querySelector('#robot-chat'), 5);
+          say(document.querySelector('#robot-chat'), 5);
         }
 
         intro();
