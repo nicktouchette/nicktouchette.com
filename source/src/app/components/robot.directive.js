@@ -6,19 +6,18 @@
     .directive('robot', robot);
 
   /** @ngInject */
-  function robot() {
+  function robot($timeout) {
     return {
       restrict: 'E',
+      scope: {
+        chatText: '=text'
+      },
       templateUrl: 'app/components/robot.html',
-      link: function(scope, el) {
+      link: function(scope, el, attr) {
         TweenLite.defaultEase = Power0.easeNone;
-
         /////////////Elements Query Code
         //BY Tag Name Img
         var imgs = document.getElementsByTagName("img");
-
-        //DOM content
-        var divs = document.getElementsByTagName('div');
 
         var robot = {
           bulb: imgs.bulb,
@@ -72,35 +71,28 @@
           robot.eyelids.setAttribute('src','./assets/images/robot/eyelidsdown.png');
         }
 
-        function say(what, speed, delay) {
-          setTimeout(function () {
-            what = what.innerHTML;
+        function say(wpm, delay) {
+          $timeout(function () {
+            scope.showChat = false;
+            var what = scope.chatText;
             var numCharacters = what.split('').length;
-            speed = speed || 0;
+            wpm = wpm || 0;
             delay = delay || 0;
 
             // BEGIN
             typing.play();
             lowerHead();
-            repeat(numCharacters);
+            simulateTyping(numCharacters);
 
-            function repeat(count) {
-              if (count !== 0) {
-                setTimeout(function() {
-                  repeat(count - 1);
-                }, speed);
-              } else {
-                // COMPLETE
+            function simulateTyping(count) {
+              $timeout(function () {
                 typing.pause();
                 raiseHead();
-                divs['robot-chat'].className = 'show';
-              }
+                scope.chatTextTyped = scope.chatText;
+                scope.showChat = true;
+              }, (numCharacters / (wpm * 5)) * 60 * 1000 );
             }
           }, delay);
-        }
-
-        function delay(what, duration) {
-          setTimeout(what, duration);
         }
 
         ///////////Timeline Code
@@ -111,8 +103,6 @@
           TweenMax.to(robot.lightGlare, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
           TweenMax.to(robot.monitor, 0.2, { opacity: 0.95, yoyo: true, repeat: -1, ease: Bounce.easeInOut });
           TweenMax.from(robot.eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
-
-          say(document.querySelector('#robot-chat'), 5);
         }
 
         intro();
@@ -121,6 +111,10 @@
         coffeeBreak.add(drink.play(), 15)
                    .add(antennaflutter.play(), 6);
 
+        scope.$watch('chatText', function(newValue) {
+          if (newValue)
+            say(900);
+        }, true);
       }
     };
   }

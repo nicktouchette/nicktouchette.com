@@ -83,6 +83,7 @@
 
   .menu-button {
     position: absolute;
+    opacity: 1;
     right: 10px;
 
     object {
@@ -103,6 +104,9 @@
     transition: all linear 0s;
 
     .container {
+      opacity: 0;
+    }
+    .menu-button {
       opacity: 0;
     }
   }
