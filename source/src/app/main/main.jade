@@ -25,8 +25,8 @@
         object(type='image/svg+xml', data='./assets/images/svgs/panel-frame.svg')
         .container(ui-view)
 
-      button.menu-button(ng-click='vm.test()')
+      a.menu-button(ui-sref='home')
         object(type='image/svg+xml', data='./assets/images/svgs/chat-button.svg')
         span Menu
 
-      p.footer Built by Nick &bull; Sourcecode on Github
+    #footer Built by Nick &bull; Sourcecode on Github

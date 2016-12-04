@@ -10,7 +10,17 @@
   right: 0;
   left: 0;
   max-width: 400px;
-  transition: 1s linear width;
+  opacity: 1;
+  transition: width 1s linear, opacity ease-in-out 1s 0.75s;
+}
+
+#footer {
+  color: #333;
+  font-size: 0.75em;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  right: 0;
 }
 
 #content {
@@ -25,12 +35,17 @@
   transition: 1s linear max-width;
 
   &.single-screen {
+    transition: 1s linear max-width 1s;
     max-width: 400px;
   }
 
   &.not-home #ui {
     transition: 1s linear opacity;
     opacity: 0;
+  }
+
+  @media (max-width: 600px) {
+    height: 100%;
   }
 
   @media (min-width: 1000px) {
@@ -56,15 +71,6 @@
   top: 0;
   right: 0;
 
-  .footer {
-    color: #333;
-    font-size: 0.75em;
-    position: absolute;
-    margin: 0;
-    bottom: 0;
-    right: 0;
-  }
-
   .frame {
     position: relative;
     width: 100%;
@@ -78,17 +84,20 @@
   .menu-button {
     position: absolute;
     right: 10px;
+
+    object {
+      pointer-events: none;
+    }
   }
 
-  // [ui-view] {
-  //   opacity: 0;
-  //   transition: 3s linear all;
-  // }
+  [ui-view] {
+    opacity: 1;
+    transition: 0.5s linear all;
+  }
 
-  // [ui-view].ng-enter-active {
-  //   opacity: 1;
-  //   background-color: red;
-  // }
+  [ui-view].ng-leave-active {
+    opacity: 0
+  }
 
   &.ng-hide-add, &.ng-hide-remove {
     transition: all linear 0s;
@@ -100,22 +109,19 @@
 
   &.ng-hide-remove-active {
     opacity: 0;
-
-    animation: flicker 0.2s;
-    animation-delay: 1.5s;
+    animation: flicker 0.2s linear 1s;
   }
 
   &.ng-hide-add-active {
-    animation: flicker 0.2s;
+    animation: flicker 0.2s linear 0.5s reverse;
   }
 
   @keyframes flicker {
-    0%   {opacity: .2;}
-    25%  {opacity: .2;}
-    50%  {opacity: .6;}
-    75%  {opacity: .2;}
-    88%  {opacity: .9;}
-    100% {opacity: .5;}
+    0%   {opacity: 0; transform: scale(0, 0); filter: brightness(10);}
+    1%   {opacity: 1;}
+    10%  {transform: scale(0.5, 0.01);}
+    50%  {transform: scale(1, 0.01); filter: brightness(10);}
+    100% {opacity: 1; transform: scale(1,1); filter: brightness(1);}
   }
 
   @media (min-width: 1000px) {

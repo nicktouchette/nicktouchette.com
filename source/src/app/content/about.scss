@@ -1,4 +1,8 @@
 #about {
+    .title {
+      clear: right;
+    }
+
   .top {
     position: relative;
     width: 100%;
@@ -12,6 +16,11 @@
       vertical-align: top;
       margin: 0px 8px;
       float: right;
+      font-size: 0;
+
+      object {
+        max-width: 100px;
+      }
     }
   }
 
@@ -29,6 +38,7 @@
 
     .header {
       margin-top: 0;
+      margin-bottom: 5px;
       font-weight: bold;
       color: white;
     }

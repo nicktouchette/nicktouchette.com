@@ -72,6 +72,10 @@ body {
   margin: 0;
   background-color: black;
   font-size: 18px;
+
+  @media (max-width: 342px) {
+    font-size: 16px;
+  }
 }
 
 a {
@@ -208,10 +212,10 @@ input[type='submit'] {
   opacity: 1;
   color: white;
   z-index: 5;
-  bottom: 0;
+  bottom: 15px;
   right: 15px;
   left: 15px;
-  font-size: 34px;
+  font-size: 2em;
   line-height: 1em;
   max-height: 370px;
 
