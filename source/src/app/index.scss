@@ -165,7 +165,7 @@ input[type='submit'] {
     letter-spacing: -1px;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 375px) {
     font-size: 10px;
   }
 }
@@ -205,7 +205,7 @@ input[type='submit'] {
   color: black;
   line-height: 1.3em;
   bottom: -30px;
-  max-height: 104px;
+  max-height: 132px;
 
   object {
     position: absolute;
