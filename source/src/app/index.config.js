@@ -9,7 +9,6 @@
   function config($logProvider, RestangularProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
-    // RestangularProvider.setDefaultHttpFields({withCredentials: true});
   }
 
 })();

@@ -15,20 +15,9 @@
 
     var intro = [
       {message: 'Welcome!', delay: 5},
-      {message: 'Unfortunately, Nick is not here at the moment, so I\'m here on his behalf.  Here to serve you.', delay: 6},
+      {message: 'Unfortunately, Nick is not here at the moment, so I\'m here on his behalf.  Allow me to serve you.', delay: 6},
       {message: 'Ask me a question below to learn more.', delay: 4}
     ];
-
-    // var randomBits = [
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2},
-    //   {message: 'meep', delay: 2}
-    // ];
 
     function playScript(script, index, count) {
       if (angular.isArray(script)) {
@@ -53,10 +42,10 @@
 
     function chooseRandom() {
       if (!scriptRunning) {
-        Restangular.oneUrl('jokes', 'http://api.icndb.com/jokes/random').get()
+        Restangular.oneUrl('jokes', 'http://api.icndb.com/jokes/random?exclude=[explicit]&escape=javascript').get()
         .then(function(data) {
-          if (data.length < 200) {
-            playScript(data.value.joke);
+          if (data.value.joke.length < 200) {
+            playScript(decodeURI(data.value.joke));
           }
         });
       }
