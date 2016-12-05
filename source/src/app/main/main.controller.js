@@ -8,15 +8,25 @@
   /** @ngInject */
   function MainController($state, $timeout, $interval, $scope, Restangular) {
     var vm = this;
+    var scriptRunning;
 
     vm.state = $state;
 
-    var scriptRunning;
+    var hasVisited = localStorage.getItem('hasVisited');
+    if (!hasVisited) localStorage.setItem('hasVisited', true);
 
-    var intro = [
+    var firstSessionLoad = !sessionStorage.getItem('hasVisited');
+    if (firstSessionLoad) sessionStorage.setItem('hasVisited', true);
+
+    var introFirstVisit = [
       {message: 'Welcome!', delay: 5},
       {message: 'Unfortunately, Nick is not here at the moment, so I\'m here on his behalf.  Allow me to serve you.', delay: 6},
       {message: 'Ask me a question below to learn more.', delay: 4}
+    ];
+
+    var introHasVisited = [
+      {message: 'Welcome back!', delay: 5},
+      {message: 'Feel free to ask me a question.', delay: 4}
     ];
 
     function playScript(script, index, count) {
@@ -41,7 +51,7 @@
     }
 
     function chooseRandom() {
-      if (!scriptRunning) {
+      if (!scriptRunning && !document.hidden) {
         Restangular.oneUrl('jokes', 'http://api.icndb.com/jokes/random?exclude=[explicit]&escape=javascript').get()
         .then(function(data) {
           if (data.value.joke.length < 200) {
@@ -51,12 +61,21 @@
       }
     }
 
-    playScript(intro);
+    if (!hasVisited) {
+      playScript(intro);
+    } else {
+      if (firstSessionLoad) {
+        playScript(introHasVisited);
+      } else {
+        chooseRandom();
+      }
+    }
 
-    $interval(chooseRandom, Math.floor(Math.random() * (40 - 20 + 1)) + 20 * 1000);
+    $interval(chooseRandom, (Math.floor(Math.random() * (40 - 20 + 1)) + 20) * 1000);
 
     $scope.$on('$destroy', function(){
       $timeout.cancel(scriptRunning);
+      $interval.cancel(chooseRandom);
     });
   }
 })();
