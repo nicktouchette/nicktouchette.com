@@ -105,11 +105,15 @@
           TweenMax.from(robot.eyelids, 0.25, { delay: 1, immediateRender: false, opacity: 1, repeat: -1, repeatDelay: 5});
         }
 
-        intro();
-
         var coffeeBreak = new TimelineMax({repeat: -1});
         coffeeBreak.add(drink.play(), 15)
                    .add(antennaflutter.play(), 6);
+
+        $('#monitor').load(function() {
+            scope.imagesLoaded = true;
+        });
+
+        intro();
 
         scope.$watch('chatText', function(newValue) {
           if (newValue)

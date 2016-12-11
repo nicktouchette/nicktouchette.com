@@ -1,6 +1,5 @@
 #landing {
-  background-color: black;
-  z-index: -1;
+  // background: radial-gradient(circle, #040914 1%, #000000 100%);
 }
 
 #ui {
@@ -296,8 +295,7 @@
 
 #cans {
   top: 290px;
-  width: 100px;
-  right: 50px;
+  width: 100%;
 }
 
 #can, #candrink {

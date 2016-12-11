@@ -52,10 +52,10 @@
 
     function chooseRandom() {
       if (!scriptRunning && !document.hidden) {
-        Restangular.oneUrl('jokes', 'http://api.icndb.com/jokes/random?exclude=[explicit]&escape=javascript').get()
+        Restangular.oneUrl('jokes', 'http://mentalfloss.com/api/1.0/views/amazing_facts.json?limit=1&display_id=xhr&cb=' + Math.random()).get()
         .then(function(data) {
-          if (data.value.joke.length < 200) {
-            playScript(decodeURI(data.value.joke));
+          if (data[0].fact_body.length < 200) {
+            playScript(decodeURI(data[0].fact_body));
           }
         });
       }

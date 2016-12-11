@@ -1,11 +1,11 @@
 .chat-container
   #robot-chat(ng-class='{show: showChat}')
     object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble.svg')
-    p {{chatTextTyped}}
+    p(ng-bind-html='chatTextTyped')
     //- p Welcome
-#container
+#container(ng-show='imagesLoaded')
   img#window(src='./assets/images/window.gif')
-  img#cans(src='./assets/images/canpile.png')
+  img#cans(src='./assets/images/cangroup.png')
   #light
     img#bulb(src='./assets/images/lightbulb.png')
     img#glare(src='./assets/images/glare.png')
