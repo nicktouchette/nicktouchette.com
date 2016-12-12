@@ -1,0 +1,7 @@
+<svg width="20px" height="30px" viewBox="221 147 20 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Chat-Pointer-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(221.000000, 147.000000)">
+        <polygon id="Inside" fill="#000000" points="17.7476196 0.993835449 17.6093617 22.6789138 3.1494751 0.993835449"></polygon>
+        <polygon id="Outside" fill="#FFFFFF" points="19.6364838 29.1100759 0.829966813 1.16771285 3.30216249 1.16771285 17.6344531 22.5661279 17.6344531 1.16771285 19.6364838 1.16771285"></polygon>
+    </g>
+</svg>

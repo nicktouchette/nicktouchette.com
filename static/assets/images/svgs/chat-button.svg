@@ -1,0 +1,16 @@
+<svg width="34px" height="31px" viewBox="221 466 34 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0.345696069,8.20259541 C0.345696069,3.78584739 3.92550538,0.205365674 8.35091101,0.205365674 L26.942489,0.205365674 C30.8099428,0.205365674 33.9451335,3.33712063 33.9451335,7.20813782 L33.9451335,14.9710591 C33.9451335,19.9431602 29.9301928,23.6314184 25.4421592,23.2486431 L25.4421592,23.2486431 L25.4421592,30.3700652 L17.1454148,23.9738446 L9.33573797,23.9738446 C4.37067493,23.9738446 0.345696069,19.9418461 0.345696069,14.9710591 L0.345696069,8.20259541 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="33.5994375" height="30.1646996" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Chat-Button" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(221.000000, 466.000000)">
+        <use id="bubble" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+        <g id="Hamburger" transform="translate(10.000000, 6.000000)" fill="#FFFFFF">
+            <polygon id="top" points="13.8796713 1.4376334 13.8639204 0 0 0.15685986 0.0157508471 1.59449326"></polygon>
+            <polygon id="middle" points="13.8796713 6.08745344 13.8639204 4.64982005 0 4.80667991 0.0157508471 6.2443133"></polygon>
+            <polygon id="bottom" points="13.8796713 10.7372735 13.8639204 9.2996401 0 9.45649996 0.0157508471 10.8941334"></polygon>
+        </g>
+    </g>
+</svg>
