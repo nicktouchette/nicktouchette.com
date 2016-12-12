@@ -61,17 +61,20 @@
       }
     }
 
-    if (!hasVisited) {
-      playScript(intro);
-    } else {
-      if (firstSessionLoad) {
-        playScript(introHasVisited);
+    vm.playScene = function() {
+      if (!hasVisited) {
+        playScript(intro);
       } else {
-        chooseRandom();
+        if (firstSessionLoad) {
+          playScript(introHasVisited);
+        } else {
+          chooseRandom();
+        }
       }
-    }
 
-    $interval(chooseRandom, (Math.floor(Math.random() * (40 - 20 + 1)) + 20) * 1000);
+      $interval(chooseRandom, (Math.floor(Math.random() * (40 - 20 + 1)) + 20) * 1000);
+    };
+
 
     $scope.$on('$destroy', function(){
       $timeout.cancel(scriptRunning);

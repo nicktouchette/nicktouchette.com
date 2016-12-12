@@ -4,7 +4,7 @@
       h1 Nick Touchette
       p Full Stack #[br] Web Developer
     #ui
-      robot#scene(text='vm.chatText')
+      robot#scene(text='vm.chatText', on-load='vm.playScene()')
 
       #user-chat
         object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble2.svg')

@@ -10,7 +10,8 @@
     return {
       restrict: 'E',
       scope: {
-        chatText: '=text'
+        chatText: '=text',
+        onLoad: '&'
       },
       templateUrl: 'app/components/robot.html',
       link: function(scope, el, attr) {
@@ -109,12 +110,11 @@
         coffeeBreak.add(drink.play(), 15)
                    .add(antennaflutter.play(), 6);
 
-        $('#monitor').load(function() {
+        $(imgs[imgs.length - 1]).load(function() {
             scope.imagesLoaded = true;
             intro();
+            scope.onLoad();
         });
-
-
 
         scope.$watch('chatText', function(newValue) {
           if (newValue)
