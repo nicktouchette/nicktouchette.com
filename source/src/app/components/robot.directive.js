@@ -111,9 +111,10 @@
 
         $('#monitor').load(function() {
             scope.imagesLoaded = true;
+            intro();
         });
 
-        intro();
+
 
         scope.$watch('chatText', function(newValue) {
           if (newValue)
