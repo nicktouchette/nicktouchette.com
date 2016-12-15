@@ -1,9 +1,9 @@
 #landing.layout-full
-  #content(ng-class='{"single-screen": vm.state.is("home"), "not-home": !vm.state.is("home")}')
+  #content.slide-animation(ng-class='{"wide-screen": !vm.state.is("home") && $media.raw("(min-width: 1000px)")}')
     #header
       h1 Nick Touchette
       p Full Stack #[br] Web Developer
-    #ui
+    #ui(ng-class='{home: vm.state.is("home")}')
       robot#scene(text='vm.chatText', on-load='vm.playScene()')
 
       #user-chat
@@ -17,7 +17,7 @@
     #content-frame(ng-hide='vm.state.is("home")')
       .frame
         object(type='image/svg+xml', data='./assets/images/svgs/panel-frame.svg')
-        .container(ui-view)
+        .container.fade(ui-view)
 
       a.menu-button(ui-sref='home')
         object(type='image/svg+xml', data='./assets/images/svgs/chat-button.svg')

@@ -3,7 +3,39 @@
 
   angular
     .module('source')
-    .controller('MainController', MainController);
+    .controller('MainController', MainController)
+    .animation('.fade', fade)
+    .animation('.slide-animation', slideAnimation);
+
+
+    function fade() {
+      return {
+        enter: function(element, done) {
+          TweenMax.fromTo(element, 0.25, {opacity: 0}, {opacity:1, onComplete: done});
+        },
+        leave: function(element, done) {
+          TweenMax.fromTo(element, 0.25, {opacity: 1}, {opacity: 0, onComplete: done});
+        }
+      };
+    }
+
+    function slideAnimation($media) {
+      return {
+        addClass: function(element, className, done) {
+          if (className === 'wide-screen') {
+            TweenMax.fromTo(element, 0.5, {maxWidth: '400px'}, {maxWidth: '877px', onComplete:done});
+          }
+        },
+        removeClass: function(element, className, done) {
+          var wide = $media.raw('(min-width: 1000px)');
+
+          if (className === 'wide-screen') {
+            var delay = wide ? 1:0;
+            TweenMax.fromTo(element, 0.5, {maxWidth: '877px'}, {delay: delay, maxWidth: '400px', onComplete:done});
+          }
+        }
+      };
+    }
 
   /** @ngInject */
   function MainController($state, $timeout, $interval, $scope, Restangular) {
@@ -55,7 +87,7 @@
         Restangular.oneUrl('jokes', 'http://mentalfloss.com/api/1.0/views/amazing_facts.json?limit=1&display_id=xhr&cb=' + Math.random()).get()
         .then(function(data) {
           if (data[0].fact_body.length < 200) {
-            playScript(decodeURI(data[0].fact_body));
+            playScript(decodeURIComponent(data[0].fact_body.replace('%', '%25')));
           }
         });
       }

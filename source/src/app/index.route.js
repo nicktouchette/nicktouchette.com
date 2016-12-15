@@ -17,7 +17,15 @@
       .state('projects', {
         parent: 'home',
         url: 'projects',
-        templateUrl: 'app/content/projects.html'
+        controller: 'ProjectsController',
+        controllerAs: 'vm',
+        templateUrl: 'app/projects/projects.html'
+      })
+      .state('projects.detail', {
+        url: '/:id',
+        controller: 'ProjectsDetailController',
+        controllerAs: 'vm',
+        templateUrl: 'app/projects/projectsDetail.html'
       })
       .state('about', {
         parent: 'home',

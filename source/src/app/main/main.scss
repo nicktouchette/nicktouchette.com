@@ -9,8 +9,12 @@
   right: 0;
   left: 0;
   max-width: 400px;
-  opacity: 1;
-  transition: width 1s linear, opacity ease-in-out 1s 0.75s;
+  opacity: 0;
+  transition: width 1s linear, opacity ease-in-out 0.5s;
+
+  &.home {
+    opacity: 1;
+  }
 }
 
 #footer {
@@ -27,34 +31,21 @@
   padding: 15px;
 
   margin: 0 auto;
-  max-width: 400px;
   height: 650px;
   top: 50vh;
+  max-width: 400px;
   transform: translateY(-50%);
-  transition: 1s linear max-width;
 
-  &.single-screen {
-    transition: 1s linear max-width 1s;
-    max-width: 400px;
+  &.wide-screen {
+    max-width: 877px;
   }
 
-  &.not-home #ui {
-    transition: 1s linear opacity;
-    opacity: 0;
+  &.home #ui, &.wide-screen #ui {
+    opacity: 1;
   }
 
   @media (max-width: 600px) {
     height: 100%;
-  }
-
-  @media (min-width: 1000px) {
-    &.not-home {
-      max-width: 877px;
-
-      #ui {
-        opacity: 1;
-      }
-    }
   }
 }
 
@@ -90,17 +81,17 @@
     }
   }
 
-  [ui-view] {
-    opacity: 1;
-    transition: 0.5s linear all;
-  }
+  // [ui-view] {
+  //   opacity: 1;
+  //   transition: 0.5s linear all;
+  // }
 
-  [ui-view].ng-leave-active {
-    opacity: 0
-  }
+  // [ui-view].ng-leave-active {
+  //   opacity: 0
+  // }
 
   &.ng-hide-add, &.ng-hide-remove {
-    transition: all linear 0s;
+    // transition: all linear 0s;
 
     .container {
       opacity: 0;
