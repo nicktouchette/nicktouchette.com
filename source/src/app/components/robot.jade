@@ -3,7 +3,7 @@
     object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble.svg')
     p(ng-bind-html='chatTextTyped')
     //- p Welcome
-#container(ng-show='imagesLoaded')
+#container(ng-hide='!imagesLoaded')
   img#window(src='./assets/images/window.gif')
   img#cans(src='./assets/images/cangroup.png')
   #light

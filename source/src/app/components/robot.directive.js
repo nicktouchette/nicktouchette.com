@@ -18,25 +18,27 @@
         TweenLite.defaultEase = Power0.easeNone;
         /////////////Elements Query Code
         //BY Tag Name Img
-        var imgs = document.getElementsByTagName("img");
+        var imgs = el.find("img");
+
+        var imgsById = _.keyBy(imgs, 'id');
 
         var robot = {
-          bulb: imgs.bulb,
-          lightGlare: imgs.glare,
-          head: imgs.head,
-          armLeftBicep: imgs.armleftbicep,
-          armLeftFront: imgs.armleftfront,
-          armRightBicep: imgs.armrightbicep,
-          armRightFront: imgs.armrightfront,
-          torsoTop: imgs.torsotop,
-          torsoDown: imgs.torsodown,
-          eyelids: imgs.eyelids,
+          bulb: imgsById.bulb,
+          lightGlare: imgsById.glare,
+          head: imgsById.head,
+          armLeftBicep: imgsById.armleftbicep,
+          armLeftFront: imgsById.armleftfront,
+          armRightBicep: imgsById.armrightbicep,
+          armRightFront: imgsById.armrightfront,
+          torsoTop: imgsById.torsotop,
+          torsoDown: imgsById.torsodown,
+          eyelids: imgsById.eyelids,
 
-          monitor: imgs.monitor,
-          can: imgs.can,
-          candrink: imgs.candrink,
-          antennaleft: imgs.antennaleft,
-          antennaright: imgs.antennaright,
+          monitor: imgsById.monitor,
+          can: imgsById.can,
+          candrink: imgsById.candrink,
+          antennaleft: imgsById.antennaleft,
+          antennaright: imgsById.antennaright,
 
          //By Div ID
           armRight: document.getElementById("armright"),
@@ -119,13 +121,13 @@
                    .add(antennaflutter.play(), 6);
 
         $(imgs[imgs.length - 1]).load(function() {
-            scope.imagesLoaded = true;
-            intro();
-            scope.onLoad();
+          scope.imagesLoaded = true;
+          intro();
+          scope.onLoad();
         });
 
-        $rootScope.say = function() {
-          say('launch webpage', 120);
+        $rootScope.say = function(text, wpm, delay) {
+          say(text, wpm, delay);
         };
 
         scope.$watch('chatText', function(newValue) {

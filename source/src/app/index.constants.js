@@ -4,6 +4,7 @@
 
   angular
     .module('source')
-    .constant('moment', moment);
+    .constant('moment', moment)
+    .constant('_', window._);
 
 })();
