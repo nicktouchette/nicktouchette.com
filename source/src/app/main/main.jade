@@ -10,9 +10,9 @@
         object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble2.svg')
         ul
           li Take the Tour
-          li #[a(ui-sref='about') About]
-          li #[a(ui-sref='projects') Projects]
-          li #[a(ui-sref='contact') Contact]
+          li #[a(ng-click='say();', ui-sref='about') About]
+          li #[a(ng-click='say();', ui-sref='projects') Projects]
+          li #[a(ng-click='say();', ui-sref='contact') Contact]
 
     #content-frame(ng-hide='vm.state.is("home")')
       .frame

@@ -38,7 +38,7 @@
     }
 
   /** @ngInject */
-  function MainController($state, $timeout, $interval, $scope, Restangular) {
+  function MainController($state, $timeout, $interval, $rootScope, $scope, Restangular) {
     var vm = this;
     var scriptRunning;
 

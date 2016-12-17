@@ -6,7 +6,7 @@
     .directive('robot', robot);
 
   /** @ngInject */
-  function robot($timeout) {
+  function robot($timeout, $rootScope) {
     return {
       restrict: 'E',
       scope: {
@@ -72,25 +72,33 @@
           robot.eyelids.setAttribute('src','./assets/images/robot/eyelidsdown.png');
         }
 
-        function say(wpm, delay) {
+        function say(text, wpm, delay) {
           $timeout(function () {
-            scope.showChat = false;
-            var what = scope.chatText;
+            var what = text || scope.chatText;
             var numCharacters = what.split('').length;
             wpm = wpm || 0;
             delay = delay || 0;
 
             // BEGIN
-            typing.play();
-            lowerHead();
-            simulateTyping(numCharacters);
+            if (!text) {
+              scope.showChat = false;
+              typing.play();
+              lowerHead();
+              simulateTyping(numCharacters)
+              .then(function(){
+                scope.chatTextTyped = what;
+                scope.showChat = true;
+              });
+            } else {
+              typing.play();
+              lowerHead();
+              simulateTyping(numCharacters);
+            }
 
             function simulateTyping(count) {
-              $timeout(function () {
+              return $timeout(function () {
                 typing.pause();
                 raiseHead();
-                scope.chatTextTyped = scope.chatText;
-                scope.showChat = true;
               }, (numCharacters / (wpm * 5)) * 60 * 1000 );
             }
           }, delay);
@@ -116,9 +124,13 @@
             scope.onLoad();
         });
 
+        $rootScope.say = function() {
+          say('launch webpage', 120);
+        };
+
         scope.$watch('chatText', function(newValue) {
           if (newValue)
-            say(900);
+            say(null, 900);
         }, true);
       }
     };
