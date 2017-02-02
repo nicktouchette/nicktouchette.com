@@ -2,126 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>nicktouchette.com</title>
+  <title>Nick Touchette</title>
   <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href="./css/layerorder.css">
 </head>
 <body>
-  <div id="scene">
-    <div id="container">
-      <img id="window" src="./img/window.gif"/>
-      <div id="light">
-        <img id="bulb" src="./img/lightbulb.png"/>
-        <img id="glare" src="./img/glare.png"/>
-      </div>
-
-      <div id="robot">
-        <img id="wheel" src="./img/robot/robot-wheel.png" alt="wheel"/>
-        <img id="leg" src="./img/robot/robot-leg.png" alt="leg"/>
-        <div id="armleft">
-          <img id="armleftbicep" src="./img/robot/robot-arm-left.png" alt="arm-left"/>
-          <img id="armleftfront" src="./img/robot/robot-arm-left-front.png" alt="arm-left-front"/>
-        </div>
-        <img id="torsodown" src="./img/robot/robot-torso-down.png" alt="torso-down"/>
-        <img id="torsotop" src="./img/robot/robot-torso-top.png" alt="torso-top"/>
-        <div id="armright">
-          <img id="armrightbicep" src="./img/robot/robot-arm-right.png" alt="arm-right"/>
-          <img id="armrightfront" src="./img/robot/robot-arm-right-front.png" alt="arm-right-front"/>
-        </div>
-        <img id="antennaleft" src="./img/robot/antenna.png"/>
-        <img id="head" src="./img/robot/robot-head-up.png" alt="head"/>
-        <img id="eyelids" src="./img/robot/eyelidsup.png"/>
-        <img id="antennaright" src="./img/robot/antenna.png"/>
-      </div>
-
-      <div id="items">
-        <img id="cans" src="./img/canpile.png"/>
-        <img id="desk" src="./img/desk.png"/>
-        <img id="keyboard" src="./img/keyboard.png"/>
-        <img id="can" src="./img/can.png"/>
-        <img id="candrink" src="./img/candrink.png"/>
-        <img id="monitor" src="./img/monitor.png"/>
-      </div>
-    </div>
+  <canvas id='canv'></canvas>
+  <div class='info'>
+    <p class='name nowrap'>Nick Touchette</p>
+    <p class='title nowrap'>Full Stack Web Developer</p>
+    <a class='email nowrap' href='mailto:touchette@gmail.com'>touchette@gmail.com</a>
+    <a class='phone nowrap' tel='6783655238'>(678) 365-5238</a>
   </div>
-
-  <div id="left">
-    <div id="content">
-      <h1>Nick Touchette</h1>
-      <h2>Full Stack<br/>Web<br/>Developer</h2>
-    </div>
-
-    <div id="nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <div id="about">
-      <h2>About</h2>
-      <hr/>
-      <div id="technologies">
-        <ul>
-          <h3>Front End</h3>
-          <li>CSS3</li>
-          <li>HTML5</li>
-          <li>jQuery</li>
-          <li>Angular</li>
-          <li>ReactJS</li>
-        </ul>
-        <ul>
-          <h3>Back End</h3>
-          <li>Node.js</li>
-          <li>Ruby on Rails</li>
-          <li>REST Api</li>
-          <li>PostgreSQL</li>
-          <li>MongoDB</li>
-        </ul>
-        <ul>
-          <h3>Project Management</h3>
-          <li>Github</li>
-          <li>Trello</li>
-        </ul>
-      </div>
-    </div>
-
-    <div id="project">
-      <h2>Projects</h2>
-      <hr/>
-      <ul class="screens">
-        <li><img src="./img/screenshots/filmjoy.png"/></li>
-        <li><img src="./img/screenshots/beaver-keno.png"/></li>
-        <li><img src="./img/screenshots/tetris.png"/></li>
-      </ul>
-      <ul class="screencaptions">
-        <li><a href="https://github.com/nicktouchette/film-joy"><h2>Filmjoy</h2></a></li>
-        <li><a href="https://github.com/nicktouchette/video-keno-app"><h2>Beaver Keno</h2></a></li>
-        <li><a href="https://github.com/nicktouchette/tetris"><h2>Tetris</h2></a></li>
-      </ul>
-
-    </div>
-
-    <div id="contact">
-      <h2>Contact</h2>
-      <hr/>
-      <ul>
-        <li>Email: <a href="mailto:touchette@gmail.com">touchette@gmail.com</a></li>
-        <li>Linkedin: <a href="https://www.linkedin.com/in/nicktouchette">linkedin.com/in/nicktouchette</a></li>
-        <li>Github: <a href="http://www.github.com/nicktouchette">github.com/nicktouchette</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="preload-images">
-    <img src="./img/robot/robot-head-down.png"/>
-    <img src="./img/robot/robot-head-up.png"/>
-    <img src="./img/robot/eyelidsdown.png"/>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
   <script src="./js/app.js"></script>
 </body>
 </html>

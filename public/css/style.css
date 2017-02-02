@@ -1,14 +1,3 @@
-@font-face {
-    font-family: 'silkscreennormal';
-    src: url('../fonts/slkscr-webfont.eot');
-    src: url('../fonts/slkscr-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/slkscr-webfont.woff') format('woff'),
-         url('../fonts/slkscr-webfont.ttf') format('truetype'),
-         url('../fonts/slkscr-webfont.svg#silkscreennormal') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,10 +8,15 @@ h1, h2 {
 }
 
 body {
+  position: absolute;
   background-color: black;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   color: white;
-  font-family: 'silkscreennormal', sans-serif;
+  font-family: 'Arial', sans-serif;
+  font-size: 18pt;
 }
 
 ul {
@@ -30,255 +24,45 @@ ul {
 }
 
 a, a:visited {
+  display: block;
   text-decoration: none;
-  color: purple;
+  color: rgb(182,32,32);
 }
 
 a:hover {
   color: white;
 }
 
-#nav, #content {
-  display: none;
+.nowrap {
+  white-space: nowrap ;
 }
 
-#scene {
-  position: fixed;
-  left: 54%;
-}
-
-#container * {
+canvas {
   position: absolute;
-}
-
-#robot, #items {
-  top: 200px;
-}
-
-#about {
-  margin-bottom: 50px;
-}
-
-#project {
-  margin-bottom: 50px;
-}
-
-#nav {
-  font-size: 40px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-#nav ul {
+  background-color: transparent;
   width: 100%;
+  height: 100%;
 }
 
-#left {
-  padding-top: 170px;
-  padding-left: 55px;
-  width: 700px;
-}
-
-#content {
-  font-size: 38px;
-  letter-spacing: -5px;
-}
-
-.preload-images {
+.info {
   position: absolute;
-  display: none;
-  left: 9999px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 
-#robot {
-  width: 200px;
-  height: 300px;
+.name {
+  font-size: 2em;
 }
 
-#window {
-  left: 195px;
-  top: 125px;
-  width: 150px;
+.title {
+  font-size: 1.1em;
 }
 
-#light {
-  transform-origin: 137px 0px;
-  left: 100px;
-  /*left: 62%;*/
-  width: 275px;
-  height: 400px;
-  transform: rotate(3deg);
+.email, .phone {
+  font-weight: bold;
 }
 
-#bulb {
-  height: 140px;
-  left: 120px;
-  opacity: 1;
+.phone {
+  font-size: 1.4em;
 }
-
-#glare {
-  top: 115px;
-  left: -5px;
-}
-
-#head {
-  left: 65px;
-  top: 15px;
-}
-
-#armleft {
-  transform-origin: 60px 0px;
-  left: 18px;
-  top: 100px;
-  width: 80px;
-  height: 100px;
-}
-
-#armleftbicep {
-  left: 35px;
-}
-
-#armleftfront {
-  transform-origin: 41px 7px;
-  top: 50px;
-}
-
-#armright {
-  transform-origin: 50px 0px;
-  left: 85px;
-  top: 120px;
-  width: 90px;
-  height: 100px;
-}
-
-#armrightbicep {
-  left: 48px;
-  top: 0px;
-}
-
-#armrightfront {
-  transform-origin: 62px 9px;
-  display: block;
-  top: 68px;
-}
-
-#torsotop {
-  left: 65px;
-  top: 70px;
-}
-
-#torsodown {
-  left: 85px;
-  top: 140px;
-}
-
-#leg {
-  left: 100px;
-  top: 160px;
-}
-
-#wheel {
-  left: 90px;
-  top: 210px;
-}
-
-#keyboard {
-  top: 185px;
-  left: -10px;
-}
-
-#monitor {
-  top: 80px;
-  left: -80px;
-}
-
-#desk {
-  top: 145px;
-  left: -120px;
-}
-
-#cans {
-  top: 120px;
-  left: 160px;
-}
-
-#can, #candrink {
-  width: 30px;
-  top: 200px;
-  left: 30px;
-}
-
-#candrink {
-  opacity: 0;
-}
-
-#eyelids {
-  opacity: 0;
-  left: 65px;
-  top: 15px;
-}
-
-#antennaright {
-  transform-origin: 5px 44px;
-  left: 128px;
-  top: 38px;
-}
-
-#antennaleft {
-  transform-origin: 5px 44px;
-  left: 86px;
-  top: 19px;
-}
-
-#left > div {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-#technologies {
-  width: 100%;
-}
-
-#technologies ul {
-  display: inline-block;
-  vertical-align: top;
-  width: 29%;
-}
-
-#technologies ul h3 {
-  margin-bottom: 10px;
-}
-
-#technologies ul:last-child {
-  width: 38%;
-}
-
-hr {
-  border-style: solid;
-  opacity: .15;
-  margin: 5px 0px;
-}
-
-.screens {
-  margin-left: 260px;
-}
-
-.screens li {
-  display: inline-block;
-  margin-left: -260px;
-}
-
-.screencaptions li {
-  display: inline-block;
-  width: 32.3%;
-  text-align: center;
-}
-
-.screencaptions li:first-child {
-  text-align: left;
-}
-
-.screencaptions li:last-child {
-  text-align: right;
-}
-
