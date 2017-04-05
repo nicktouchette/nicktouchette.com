@@ -1,26 +1,6 @@
-#landing.layout-full
-  #content.slide-animation(ng-class='{"wide-screen": !vm.state.is("home") && $media.raw("(min-width: 1000px)")}')
-    #header
-      h1 Nick Touchette
-      p Full Stack #[br] Web Developer
-    #ui(ng-class='{home: vm.state.is("home")}')
-      robot#scene(text='vm.chatText', on-load='vm.playScene()')
-
-      #user-chat
-        object(type='image/svg+xml', data='./assets/images/svgs/chat-bubble2.svg')
-        ul
-          li Take the Tour
-          li #[a(ng-click='say("launch about", 120);', ui-sref='about') About]
-          li #[a(ng-click='say("launch projects", 120);', ui-sref='projects') Projects]
-          li #[a(ng-click='say("launch contact", 120);', ui-sref='contact') Contact]
-
-    #content-frame(ng-hide='vm.state.is("home")')
-      .frame
-        object(type='image/svg+xml', data='./assets/images/svgs/panel-frame.svg')
-        .container.fade(ui-view)
-
-      a.menu-button(ui-sref='home')
-        object(type='image/svg+xml', data='./assets/images/svgs/chat-button.svg')
-        span Menu
-
-    #footer Built by Nick &bull; Sourcecode on Github
+.container
+  .inner-body
+    .image
+      img(src='blah')
+    .content
+      span blah blah

@@ -1,9 +1,0 @@
-#projects
-  .title #[span Projects]
-  ul.project-list(ng-repeat='(key,category) in vm.projects')
-    p {{key}}
-    li.project-preview(ui-sref='projects.detail({id: project.id})', ng-repeat='project in category')
-      img(ng-src='{{project.screenshot}}')
-      span {{project.title}}
-
-  #detail(ui-view)
