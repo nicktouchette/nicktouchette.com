@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  width: 80%;
+  min-width: 900px;
   height: 80%;
   top: 50%;
   left: 50%;
@@ -9,7 +9,6 @@
 
   .inner-body {
     position: relative;
-    background-color: green;
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -17,9 +16,14 @@
     .image {
       position: relative;
       display: inline-block;
+      overflow: hidden;
       width: 50%;
       height: 100%;
       background-color: blue;
+
+      img {
+        width: 100%;
+      }
     }
 
     .content {
@@ -30,6 +34,35 @@
       background-image: url('../assets/images/foreground.jpg');
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      color: white;
+
+      .body {
+        position: absolute;
+        font-family: arial;
+        font-size: .8em;
+        line-height: 1.6em;
+        left: 30%;
+        top: 10%;
+        height: 80%;
+        width: 40%;
+      }
+    }
+
+    .aside {
+      position: absolute;
+      display: inline;
+      right: 0;
+      width: 10%;
+      height: 100%;
+      border-left: 1px solid rgba(255,255,255,0.1);
     }
   }
+}
+
+.title {
+  position: absolute;
+  font-size: 4em;
+  top: 10%;
+  left: 0;
+  transform: rotate(-90deg) translate(-50%, -100%);
 }
