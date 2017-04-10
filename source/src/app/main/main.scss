@@ -6,6 +6,12 @@
   left: 50%;
   box-shadow: 0px 0px 37px 0px rgba(0,0,0,0.45);
   transform: translate(-50%, -50%);
+  animation: 5s ease-in-out rotate infinite alternate;
+
+  @keyframes rotate {
+    0% {transform: translate(-50%, -50%) perspective(500px) rotateY(-0.5deg);}
+    100% {transform: translate(-50%, -50%) perspective(500px) rotateY(0.5deg);}
+  }
 
   .inner-body {
     position: relative;
@@ -38,7 +44,6 @@
       overflow: hidden;
       width: 50%;
       height: 100%;
-      background-color: blue;
 
       img {
         width: 100%;
@@ -47,24 +52,34 @@
 
     .content {
       position: absolute;
-      display: inline;
+      display: inline-block;
       width: 50%;
       height: 100%;
       background-image: url('../assets/images/foreground.jpg');
       background-repeat: no-repeat;
       background-size: 100% 100%;
       color: white;
+      overflow: hidden;
+
+      .wrapper {
+        position: relative;
+        display: block;
+        overflow-y: scroll;
+        width: 103%;
+        height: 100%;
+      }
 
       .body {
-        position: absolute;
+        position: relative;
+        display: inline-block;
         font-weight: 100;
         font-size: 0.85em;
         color: $pattens-blue;
         line-height: 1.9em;
-        left: 30%;
-        top: 10%;
-        height: 80%;
-        width: 40%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 10%;
+        margin: -4px 30% -4px 30%;
       }
     }
 
@@ -86,7 +101,7 @@
   color: $alice-blue;
   letter-spacing: 0.18em;
   font-size: 3em;
-  top: 10%;
+  margin-top: 10%;
   left: 1em;
   transform: rotate(-90deg) translateX(-100%);
   transform-origin: left top;
