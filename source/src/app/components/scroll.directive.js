@@ -17,10 +17,9 @@
         var sectionArray = [], sectionCount, title, scrollPos;
 
         for (var i=0; i < bodyList.length; i++) {
-          title = angular.element(bodyList[i]).find('.title')[0].innerHTML;
+          title = bodyList[i].title;
           sectionArray.push([bodyList[i].offsetTop, title]);
         }
-
         sectionCount = sectionArray.length;
 
         var handler = function() {

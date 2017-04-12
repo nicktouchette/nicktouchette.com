@@ -95,14 +95,21 @@
 }
 
 .title {
-  position: absolute;
+  position: fixed;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 300;
   color: $alice-blue;
   letter-spacing: 0.18em;
   font-size: 3em;
-  margin-top: 10%;
-  left: 1.5em;
+  top: 10%;
+  left: 56%;
   transform: rotate(-90deg) translateX(-100%);
   transform-origin: left top;
+
+  transition: 0.5s all linear;
+
+  &.ng-hide {
+    letter-spacing: 0.5em;
+    opacity: 0;
+  }
 }
