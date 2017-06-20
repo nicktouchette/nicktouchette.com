@@ -100,7 +100,7 @@ gulp.task('server', function() {
 })
 
 gulp.task('package', function() {
-  return gulp.src('package.json')
+  return gulp.src(['package.json', '.openshift/**'], {base: './'})
     .pipe(gulp.dest('dist'));
 })
 
