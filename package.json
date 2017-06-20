@@ -6,7 +6,7 @@
   "main": "start.js",
   "scripts": {
     "start": "node --use_strict start.js",
-    "server": "cross-env NODE_ENV=development nodemon start.js"
+    "development": "concurrently \"gulp serve\" \"cross-env NODE_ENV=development nodemon start.js\""
   },
   "author": "Nick Touchette <touchette@gmail.com>",
   "dependencies": {
@@ -23,6 +23,7 @@
   "devDependencies": {
     "browser-sync": "~2.9.11",
     "browser-sync-spa": "~1.0.3",
+    "concurrently": "^3.4.0",
     "cross-env": "^5.0.1",
     "del": "~2.0.2",
     "eslint-plugin-angular": "~0.12.0",
