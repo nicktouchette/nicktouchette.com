@@ -25,7 +25,7 @@ module.exports = class RouteConfig {
           application.use(express.static(path.join(_root, _srcClient)));
           application.use('/bower_components', express.static(path.join(_root, 'bower_components')));
         }
-        // application.use(express.static(path.join(_serverDirectory, '../client')));
+        application.use(express.static(path.join(_serverDirectory, '../client')));
 
         application.use(bodyParser.json());
         application.use(contentLength.validateMax({max: 999}));

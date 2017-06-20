@@ -38,9 +38,5 @@ if (cluster.isMaster) {
     });
   }
 } else {
-  if (production) {
-    require('./server/server.js');
-  } else {
-    require('./src/server/server.js');
-  }
+  require('./server.js');
 }

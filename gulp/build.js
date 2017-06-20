@@ -94,8 +94,18 @@ gulp.task('other', function () {
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
+gulp.task('server', function() {
+  return gulp.src('src/server/**', {base: 'src'})
+    .pipe(gulp.dest('dist'));
+})
+
+gulp.task('package', function() {
+  return gulp.src('package.json')
+    .pipe(gulp.dest('dist'));
+})
+
 gulp.task('clean', function () {
   return $.del(['dist/', '.tmp'], {force: true});
 });
 
-gulp.task('build', ['html', 'fonts', 'other']);
+gulp.task('build', ['html', 'fonts', 'other', 'server', 'package']);

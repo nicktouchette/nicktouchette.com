@@ -3,10 +3,11 @@
   "version": "1.0.1",
   "description": "Server and client of nicktouchette.com",
   "private": true,
-  "main": "start.js",
+  "main": "server/start.js",
   "scripts": {
-    "start": "node --use_strict start.js",
-    "development": "concurrently \"gulp serve\" \"cross-env NODE_ENV=development nodemon start.js\""
+    "start": "node --use_strict server/start.js",
+    "development": "concurrently \"gulp serve\" \"cross-env NODE_ENV=development nodemon src/server/start.js\"",
+    "production": "gulp build && cross-env NODE_ENV=production node server/start.js"
   },
   "author": "Nick Touchette <touchette@gmail.com>",
   "dependencies": {
