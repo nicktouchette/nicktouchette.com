@@ -1,0 +1,22 @@
+{
+  "name": "source",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-animate": "~1.5.3",
+    "angular-touch": "~1.5.3",
+    "jquery": "~2.1.4",
+    "restangular": "~1.5.1",
+    "angular-ui-router": "~0.2.15",
+    "moment": "~2.10.6",
+    "animate.css": "~3.4.0",
+    "angular": "~1.5.3",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.3"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4",
+    "angular": "~1.5.3"
+  }
+}
