@@ -23,7 +23,7 @@
         sectionCount = sectionArray.length;
 
         var handler = function() {
-          scrollPos = windowEl.scrollTop();
+          scrollPos = windowEl.scrollTop() + 150;
 
           var index = 0;
           do {
