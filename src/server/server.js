@@ -1,6 +1,6 @@
 "use strict";
 
-const PORT = process.env.PORT || 3333;
+const PORT = env.NODE_PORT || 3000;
 
 const os = require("os"),
       http = require("http"),
@@ -15,7 +15,6 @@ var server = require('http').Server(app);
 RoutesConfig.init(app);
 Routes.init(app, express.Router());
 
-server.listen(PORT, () => {
-      console.log(`up and running @: ${os.hostname()} on port: ${PORT}`);
-      console.log(`environment: ${process.env.NODE_ENV}`);
-    });
+server.listen(PORT, env.NODE_IP || 'localhost', function () {
+  console.log(`Application worker ${process.pid} started...`);
+});

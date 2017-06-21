@@ -32,7 +32,7 @@ function browserSyncInit(baseDir, browser) {
 
   browserSync.instance = browserSync.init({
     startPath: '/',
-    proxy: "localhost:3333",
+    proxy: "localhost:3000",
     browser: browser
   });
 }
