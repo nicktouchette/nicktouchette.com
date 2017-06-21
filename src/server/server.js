@@ -1,12 +1,14 @@
 "use strict";
 
-const PORT = env.NODE_PORT || 3000;
 
 const os = require("os"),
       http = require("http"),
       express = require("express"),
       RoutesConfig = require("./config/routes.conf"),
-      Routes = require("./routes/index");
+      Routes = require("./routes/index"),
+      env          = process.env;
+
+const PORT = env.NODE_PORT || 3000;
 
 const app = express();
 
