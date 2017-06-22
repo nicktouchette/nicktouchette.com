@@ -7,6 +7,7 @@
       img(ng-src='{{scroll.image || sections[0].image}}')
     .content
       .wrapper(scroll-position='scroll')
-        modal-section(ng-repeat='section in sections' active='scroll.position === section.title' content='::section' on-finish-render='init()')
-    .aside
-      span {{scroll.position}}
+        modal-section(ng-repeat='section in ::sections' active='scroll.position === section.title' content='::section' on-finish-render='init()')
+    .aside(ng-if='sections.length > 1')
+      ul
+        li(ng-repeat='section in ::sections' ng-class='{"active": scroll.position === section.title}') {{section.icon || section.title}}
