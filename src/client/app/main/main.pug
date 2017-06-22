@@ -1,33 +1,3 @@
-.container
-  .inner-body
-    .header
-      .name Nick Touchette
-      .skill Full Stack Web Developer
-    .image
-      img(src='../assets/images/building.jpg')
-    .content
-      .wrapper(scroll-position='vm.scroll')
-        //- .title {{vm.scroll}}
-        .body(title='welcome')
-          .title(ng-show='vm.scroll === "welcome"') WELCOME.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-        .body(title='projects')
-          .title(ng-show='vm.scroll === "projects"') PROJECTS.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-        .body(title='test1')
-          .title(ng-show='vm.scroll === "test1"') TEST1.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-        .body(title='test12')
-          .title(ng-show='vm.scroll === "test12"') TEST2.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-        .body(title='test123')
-          .title(ng-show='vm.scroll === "test123"') TEST3.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-          p Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.
-
-    .aside
-      span {{vm.scroll}}
+h1 Nick Touchette
+modal(title='Content Box 1' sub-title='Lorem' sections='vm.sections')
+modal(title='Content Box 2' sub-title='Ipsum' sections='vm.sections')
