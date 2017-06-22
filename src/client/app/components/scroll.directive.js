@@ -48,6 +48,11 @@
           });
           handler();
         }
+
+        scope.$on('$destroy', function() {
+          windowEl.off('scroll');
+          windowEl.off('mousewheel DOMMouseScroll');
+        })
       }
     };
   }
