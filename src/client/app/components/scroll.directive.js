@@ -39,7 +39,13 @@
             }
           };
           windowEl.on('scroll', scope.$apply.bind(scope, handler));
-
+          windowEl.on('mousewheel DOMMouseScroll', function(e) {
+              var d = e.originalEvent.wheelDelta || -e.originalEvent.detail,
+                  dir = d > 0 ? 'up' : 'down',
+                  stop = (dir == 'up' && this.scrollTop == 0) ||
+                         (dir == 'down' && this.scrollTop == this.scrollHeight-this.offsetHeight);
+              stop && e.preventDefault();
+          });
           handler();
         }
       }
