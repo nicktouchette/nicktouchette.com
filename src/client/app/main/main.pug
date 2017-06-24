@@ -20,7 +20,7 @@
     span email
     input(type='text' name='email' value='{{vm.contact.email}}')
     span message
-    input(type='text' name='message' value='{{vm.contact.message}}')
+    textarea(name='message' rows='3') {{vm.contact.message}}
     input(type='submit' value='send message')
     img.required(src='./assets/images/contact-required.png')
 #footer
