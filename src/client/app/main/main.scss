@@ -3,11 +3,11 @@
 #solution,
 #contact {
   min-height: 100vh;
-  margin-bottom: 200px;
+  margin-bottom: 191px;
 
   background-repeat: no-repeat;
-  background-size: 30%;
-  background-position: 10% 0%;
+  background-size: 46.5%;
+  background-position: 13% 0%;
 }
 
 #landing {
@@ -118,6 +118,21 @@
 #footer {
   width: 100%;
   bottom: 0;
+
+  .sites {
+    width: 303px;
+
+    img {
+      width: 33.3%;
+      display: inline-block;
+      position: relative;
+
+      &:nth-child(2) {
+        padding: 0 15px;
+        padding: 0 15px;
+      }
+    }
+  }
 }
 
 img {
@@ -128,6 +143,7 @@ img {
 
 .header {
   width: 517px;
+  padding-top: 132px;
   margin-bottom: 50px;
 }
 
