@@ -7,13 +7,15 @@
 }
 
 #landing {
-  background-image: url('../assets/images/background.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-image: url('../assets/images/landing-code.png'), url('../assets/images/background.jpg');
+  background-size: auto auto, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-position:  center center, left top;
 }
 
 #stack, #solution, #contact {
-  background-position:  189px 0%, left top;
+  background-position:  5% 5%, left top;
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
 }
@@ -30,10 +32,6 @@
   .landing-text {
     width: 372px;
     transform: translate(-50%, -1em);
-  }
-
-  .code {
-    max-height: 100%;
   }
 
   .monogram {
