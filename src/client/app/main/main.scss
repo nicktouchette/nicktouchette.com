@@ -15,6 +15,7 @@
   .vignette {
     height: 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .landing-text {
@@ -92,6 +93,9 @@
       background-color: $blue-dark;
       width: 100%;
       margin-bottom: 20px;
+      color: white;
+      font-size: 24px;
+      padding: 0px 0.5em;
     }
 
     input[type='submit'] {
@@ -123,6 +127,8 @@
 
   .background {
     position: relative;
+    max-width: 100%;
+    width: 100%;
   }
 
   .sites {
