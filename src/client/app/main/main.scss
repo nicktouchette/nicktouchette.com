@@ -30,7 +30,7 @@
   }
 
   .landing-text {
-    width: 372px;
+    width: 472px;
     transform: translate(-50%, -1em);
   }
 
@@ -39,13 +39,15 @@
   }
 
   .more {
+    animation-delay: 3s;
+
     bottom: 5%;
     width: 2em;
   }
 }
 
 #stack {
-  background-image: url('../assets/images/stack-background.png'), url('../assets/images/background.jpg'),;
+  background-image: url('../assets/images/stack-background.png'), url('../assets/images/background.jpg');
   background-size: 531px 448px, 100% 100%;
 
   .brands {
@@ -58,11 +60,19 @@
 }
 
 #solution {
-  background-image: url('../assets/images/solution-background.png'), url('../assets/images/background.jpg'),;
+  background-image: url('../assets/images/solution-background.png'), url('../assets/images/background.jpg');
   background-size: 514px auto, 100% 100%;
 
   .points {
-    width: 1002px;
+    position: relative;
+    text-align: center;
+    max-width: 1032px;
+
+    .point {
+      display: inline-block;
+      margin: 15px;
+      width: 314px;
+    }
   }
 
   img {
@@ -71,7 +81,7 @@
 }
 
 #contact {
-  background-image: url('../assets/images/contact-background.png'), url('../assets/images/background.jpg'),;
+  background-image: url('../assets/images/contact-background.png'), url('../assets/images/background.jpg');
   background-size: 449px auto, 100% 100%;
   padding-bottom: 50px;
 
