@@ -3,10 +3,19 @@
 #solution,
 #contact {
   min-height: 100vh;
-  margin-bottom: 191px;
+  padding-bottom: 191px;
+}
 
+#landing {
+  background-image: url('../assets/images/background.jpg');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-position: 189px 0%;
+}
+
+#stack, #solution, #contact {
+  background-position:  189px 0%, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
 }
 
 #landing {
@@ -38,8 +47,8 @@
 }
 
 #stack {
-  background-image: url('../assets/images/stack-background.png');
-  background-size: 531px 448px;
+  background-image: url('../assets/images/stack-background.png'), url('../assets/images/background.jpg'),;
+  background-size: 531px 448px, 100% 100%;
 
   .brands {
     width: 720px;
@@ -51,8 +60,8 @@
 }
 
 #solution {
-  background-image: url('../assets/images/solution-background.png');
-  background-size: 514px auto;
+  background-image: url('../assets/images/solution-background.png'), url('../assets/images/background.jpg'),;
+  background-size: 514px auto, 100% 100%;
 
   .points {
     width: 1002px;
@@ -64,9 +73,9 @@
 }
 
 #contact {
-  background-image: url('../assets/images/contact-background.png');
-  background-size: 449px auto;
-  margin-bottom: 50px;
+  background-image: url('../assets/images/contact-background.png'), url('../assets/images/background.jpg'),;
+  background-size: 449px auto, 100% 100%;
+  padding-bottom: 50px;
 
   form {
     position: relative;
