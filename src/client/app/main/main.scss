@@ -1,0 +1,143 @@
+#landing,
+#stack,
+#solution,
+#contact {
+  min-height: 100vh;
+  margin-bottom: 200px;
+
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 10% 0%;
+}
+
+#landing {
+  height: 100vh;
+
+  .vignette {
+    height: 100%;
+    width: 100%;
+  }
+
+  .landing-text {
+    width: 372px;
+    transform: translate(-50%, -1em);
+  }
+
+  .code {
+    max-height: 100%;
+  }
+
+  .monogram {
+    width: 28em;
+  }
+
+  .more {
+    bottom: 5%;
+    width: 2em;
+  }
+}
+
+#stack {
+  background-image: url('../assets/images/stack-background.png');
+
+  .brands {
+    width: 720px;
+  }
+
+  img {
+    position: relative;
+  }
+}
+
+#solution {
+  background-image: url('../assets/images/solution-background.png');
+
+  .points {
+    width: 1002px;
+  }
+
+  img {
+    position: relative;
+  }
+}
+
+#contact {
+  background-image: url('../assets/images/contact-background.png');
+
+  margin-bottom: 50px;
+
+  form {
+    position: relative;
+    width: 588px;
+
+    span {
+      text-transform: uppercase;
+      font-size: 20px;
+      vertical-align: top;
+
+      &::before {
+        content: '*';
+        color: $orange;
+        font-size: 1.25em;
+        margin-right: 5px;
+      }
+    }
+
+    input[type='text'] {
+      display: block;
+      height: 57px;
+      border: 0;
+      background-color: $blue-dark;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    input[type='submit'] {
+      display: block;
+      height: 69px;
+      border: 0;
+      background-color: $green;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 1.20em;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      color: white;
+    }
+  }
+
+  .required {
+    width: 169px;
+  }
+
+  img {
+    position: relative;
+  }
+}
+
+#footer {
+  width: 100%;
+  bottom: 0;
+}
+
+img {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+}
+
+.header {
+  width: 517px;
+  margin-bottom: 50px;
+}
+
+.center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-both {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

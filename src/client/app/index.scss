@@ -63,6 +63,10 @@
   content: "\eac9";
 }
 
+$orange: #FF9200;
+$blue-dark: #305369;
+$green: #2FBC2E;
+
 $arsenic: #37414B;
 $mischka: #9FA9B5;
 $light-slate-grey: #7D8792;
@@ -70,14 +74,17 @@ $heather: #AAB4C0;
 $pattens-blue: #DBE6F1;
 $alice-blue: #EEF4FC;
 
+html {
+  background-image: url('../assets/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
 body {
   margin: 0;
   color: $pattens-blue;
   font-family: 'Yantramanav', sans-serif;
-  background-color: $arsenic;
-  background-image: url('../assets/images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
 ul {
