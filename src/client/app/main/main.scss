@@ -6,8 +6,7 @@
   margin-bottom: 191px;
 
   background-repeat: no-repeat;
-  background-size: 46.5%;
-  background-position: 13% 0%;
+  background-position: 189px 0%;
 }
 
 #landing {
@@ -15,7 +14,7 @@
 
   .vignette {
     height: 100%;
-    width: 100%;
+    max-width: 100%;
   }
 
   .landing-text {
@@ -39,6 +38,7 @@
 
 #stack {
   background-image: url('../assets/images/stack-background.png');
+  background-size: 531px 448px;
 
   .brands {
     width: 720px;
@@ -51,6 +51,7 @@
 
 #solution {
   background-image: url('../assets/images/solution-background.png');
+  background-size: 514px auto;
 
   .points {
     width: 1002px;
@@ -63,12 +64,13 @@
 
 #contact {
   background-image: url('../assets/images/contact-background.png');
-
+  background-size: 449px auto;
   margin-bottom: 50px;
 
   form {
     position: relative;
     width: 588px;
+    max-width: 95%;
 
     span {
       text-transform: uppercase;
@@ -116,21 +118,24 @@
 }
 
 #footer {
+  position: relative;
   width: 100%;
-  bottom: 0;
+
+  .background {
+    position: relative;
+  }
 
   .sites {
-    width: 303px;
+    position: absolute;
+    bottom: 0;
+    max-width: 303px;
+    width: 35%;
 
     img {
       width: 33.3%;
       display: inline-block;
       position: relative;
-
-      &:nth-child(2) {
-        padding: 0 15px;
-        padding: 0 15px;
-      }
+      padding: 20px;
     }
   }
 }
@@ -138,12 +143,12 @@
 img {
   position: absolute;
   display: block;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .header {
   width: 517px;
-  padding-top: 132px;
+  padding-top: 157px;
   margin-bottom: 50px;
 }
 
