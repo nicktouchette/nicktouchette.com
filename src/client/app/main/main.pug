@@ -2,7 +2,9 @@
   img.monogram.center-both(src='./assets/images/monogram.png')
   img.vignette(src='./assets/images/vignette.png')
   img.landing-text.center-both(src='./assets/images/landing-text.png')
-  img.more.center(class='animated bounce' ng-click='vm.scrollTo("#stack")' src='./assets/images/landing-more.png')
+  .more.center(class='bounce' ng-click='vm.scrollTo("#stack")')
+    span Scroll
+    img(src='./assets/images/landing-more.png')
 #stack
   img.header.center(src='./assets/images/stack-header.png')
   img.brands.center(src='./assets/images/stack-brands.png')
@@ -17,16 +19,16 @@
     img.point(src='./assets/images/solution6.png')
 #contact
   img.header.center(src='./assets/images/contact-header.png')
-  form.center
+  form.submit-form.center(ng-submit="vm.submit()")
     span name
-    input(type='text' name='name' value='{{vm.contact.name}}')
+    input(ng-disabled='vm.submitSuccessful' type='text' name='name' ng-model='vm.contact.name')
     span company
-    input(type='text' name='company' value='{{vm.contact.company}}')
+    input(ng-disabled='vm.submitSuccessful' type='text' name='company' ng-model='vm.contact.company')
     span email
-    input(type='text' name='email' value='{{vm.contact.email}}')
+    input(ng-disabled='vm.submitSuccessful' type='text' name='email' ng-model='vm.contact.email')
     span message
-    textarea(name='message' rows='3') {{vm.contact.message}}
-    input(type='submit' value='send message')
+    textarea(ng-disabled='vm.submitSuccessful' name='message' rows='3' ng-model='vm.contact.message')
+    input(ng-disabled='vm.submitSuccessful' type='submit' value='{{vm.submitSuccessful ? "Message Sent Successfully!": "Send Message"}}')
     img.required(src='./assets/images/contact-required.png')
 #footer
   img.background.center(src='./assets/images/footer-text.png')

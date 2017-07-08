@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('source', ['ngAnimate', 'ngTouch', 'restangular', 'ui.router', 'angular.media']);
+    .module('source', ['ngAnimate', 'ngMessages', 'ngTouch', 'restangular', 'ui.router', 'angular.media']);
 
 })();

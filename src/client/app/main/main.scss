@@ -30,10 +30,18 @@
   }
 
   .more {
-    animation-delay: 3s;
-
+    position: absolute;
+    display: inline-block;
     bottom: 5%;
-    width: 2em;
+    color: $orange;
+    font-weight: 100;
+    font-size: 0.75em;
+
+    img {
+      position: relative;
+      width: 2em;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -103,6 +111,10 @@
       color: white;
       font-size: 24px;
       padding: 0.5em 0.5em;
+
+      &:disabled {
+        opacity: 0.2;
+      }
     }
 
     input[type='submit'] {
