@@ -87,7 +87,6 @@ gulp.task('other', function () {
 
   return gulp.src([
     path.join(conf.paths.src, '/**/*'),
-    path.join(conf.paths.src, '/google5c5ca80aeb141e6f.html'),
     path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss,pug,bowerrc,json}')
   ])
     .pipe(fileFilter)
