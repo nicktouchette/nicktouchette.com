@@ -12,8 +12,6 @@ module.exports = class RouteConfig {
     static init(application) {
         let _root = process.cwd();
         let _serverDirectory = path.join(__dirname, '..');
-        let _tempClient = "/.tmp/client/serve";
-        let _srcClient = "/src/client";
 
         application.use(compression({
             level: zlib.Z_BEST_COMPRESSION,
@@ -21,6 +19,9 @@ module.exports = class RouteConfig {
         }));
 
         if (process.env.NODE_ENV === "development") {
+          let _tempClient = "/.tmp/client/serve";
+          let _srcClient = "/src/client";
+
           application.use(express.static(path.join(_root, _tempClient)));
           application.use(express.static(path.join(_root, _srcClient)));
           application.use('/bower_components', express.static(path.join(_root, 'bower_components')));
