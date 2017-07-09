@@ -1,0 +1,4 @@
+[submodule "nodejs"]
+	path = dist
+	url = ssh://5892a4c52d527107e40001e7@nodejs-nicktouchette.rhcloud.com/~/git/nodejs.git/
+	branch = master
