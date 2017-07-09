@@ -39,11 +39,13 @@
       body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
     }]
 
-    vm.submit = function() {
+    vm.submit = function(form) {
       Restangular.all('submit').post(vm.contact)
       .then(function(){
         vm.submitSuccessful = true;
         vm.contact = angular.copy(defaults);
+        form.$setPristine();
+        form.$setUntouched();
       });
     }
 

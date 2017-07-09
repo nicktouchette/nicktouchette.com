@@ -89,20 +89,23 @@
     width: 588px;
     max-width: 95%;
 
-    span {
+    .field-title {
       text-transform: uppercase;
-      font-size: 20px;
-      vertical-align: top;
+      font-size: 1.25em;
+      line-height: 1.25em;
+      margin-right: 10px;
 
       &::before {
         content: '*';
+        vertical-align: bottom;
+        font-size: 1.5em;
         color: $orange;
-        font-size: 1.25em;
         margin-right: 5px;
+        line-height: 0.5em;
       }
     }
 
-    input[type='text'], textarea {
+    input[type='text'], input[type='email'], textarea {
       display: block;
       border: 0;
       background-color: $blue-dark;
@@ -186,4 +189,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+[role='alert'] {
+  float: right;
+  color: red;
 }
