@@ -78,6 +78,10 @@ body {
   margin: 0;
   color: $pattens-blue;
   font-family: 'Yantramanav', sans-serif;
+  background-image: url('../assets/images/background.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 ul {
