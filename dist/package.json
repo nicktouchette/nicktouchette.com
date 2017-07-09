@@ -8,7 +8,8 @@
     "start": "node --use_strict server/start.js",
     "development": "concurrently \"gulp serve\" \"cross-env NODE_ENV=development node src/server/start.js\"",
     "production": "gulp build && cross-env NODE_ENV=production node dist/server/start.js",
-    "deploy": "git subtree push --prefix dist live master"
+    "deploy": "git subtree push --prefix dist live production",
+    "build": "gulp build && git subtree push --prefix dist origin production"
   },
   "author": "Nick Touchette <touchette@gmail.com>",
   "dependencies": {
