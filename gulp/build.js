@@ -70,11 +70,7 @@ gulp.task('html', ['inject', 'partials'], function () {
 // Only applies for fonts from bower dependencies
 // Custom fonts are handled by the "other" task
 gulp.task('fonts', function () {
-  return gulp.src($.mainBowerFiles({ paths: {
-                                       bowerDirectory: 'bower_components',
-                                       bowerrc: conf.paths.src + '.bowerrc',
-                                       bowerJson: conf.paths.src + '/bower.json'
-                                     }}))
+  return gulp.src($.mainBowerFiles())
     .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
@@ -87,24 +83,14 @@ gulp.task('other', function () {
 
   return gulp.src([
     path.join(conf.paths.src, '/**/*'),
-    path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss,pug,bowerrc,json}')
+    path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss,pug}')
   ])
     .pipe(fileFilter)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });
 
-gulp.task('server', function() {
-  return gulp.src('src/server/**', {base: 'src'})
-    .pipe(gulp.dest('dist'));
-})
-
-gulp.task('package', function() {
-  return gulp.src(['package.json', '.openshift/**'], {base: './'})
-    .pipe(gulp.dest('dist'));
-})
-
 gulp.task('clean', function () {
   return $.del(['dist/', '.tmp'], {force: true});
 });
 
-gulp.task('build', ['html', 'fonts', 'other', 'server', 'package']);
+gulp.task('build', ['html', 'fonts', 'other']);

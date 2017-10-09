@@ -13,9 +13,8 @@ var gutil = require('gulp-util');
  */
 exports.paths = {
   src: 'src/client',
-  server: 'src/server',
-  dist: 'dist/client',
-  tmp: '.tmp/client'
+  dist: 'dist',
+  tmp: '.tmp'
 };
 
 /**
@@ -24,8 +23,7 @@ exports.paths = {
  *  to inject css preprocessor deps and js files in karma
  */
 exports.wiredep = {
-  directory: 'bower_components',
-  cwd: this.paths.src
+  directory: 'bower_components'
 };
 
 /**
