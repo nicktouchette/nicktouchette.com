@@ -4,6 +4,9 @@
   "description": "API and client of nicktouchette.com",
   "private": true,
   "author": "Nick Touchette <touchette@gmail.com>",
+  "scripts": {
+    "deploy": "gsutil -m rsync -d -r dist gs://www.nicktouchette.com"
+  },
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.2.3",
@@ -18,6 +21,7 @@
     "gulp-angular-filesort": "~1.1.1",
     "gulp-angular-templatecache": "~1.8.0",
     "gulp-autoprefixer": "~3.0.2",
+    "gulp-changed": "^3.1.0",
     "gulp-consolidate": "^0.2.0",
     "gulp-cssnano": "~2.1.1",
     "gulp-eslint": "~1.0.0",

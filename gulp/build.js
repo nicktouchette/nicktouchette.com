@@ -72,6 +72,7 @@ gulp.task('html', ['inject', 'partials'], function () {
 gulp.task('fonts', function () {
   return gulp.src($.mainBowerFiles())
     .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
+    .pipe($.changed(conf.paths.dist))
     .pipe($.flatten())
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
 });
@@ -85,6 +86,7 @@ gulp.task('other', function () {
     path.join(conf.paths.src, '/**/*'),
     path.join('!' + conf.paths.src, '/**/*.{html,css,js,scss,pug}')
   ])
+    .pipe($.changed(conf.paths.dist))
     .pipe(fileFilter)
     .pipe(gulp.dest(path.join(conf.paths.dist, '/')));
 });

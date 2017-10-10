@@ -9,52 +9,22 @@
   function scrollPosition() {
     return {
       link: function(scope, element) {
-        scope.init = function() {
-          var windowEl = angular.element(element),
-              bodyList = element.find('.body'),
-              sectionArray = [],
-              sectionCount, title, image, scrollPos;
+        var windowEl = angular.element(element),
+            bodyList = element.find('.body'),
+            sectionCount, title, image, scrollPos;
 
-          for (var i=0; i < bodyList.length; i++) {
-            title = bodyList[i].dataset.title;
-            image = bodyList[i].dataset.image;
-            sectionArray.push({offset: bodyList[i].offsetTop,
-                               title: title,
-                               image: image
-                              });
-          }
-          sectionCount = sectionArray.length;
+        var handler = function() {
+          var index = 0;
+          do {
+            index++;
+          } while (bodyList[index].getBoundingClientRect().top < 0);
+          console.log(index);
+        };
 
-          var handler = function() {
-            scrollPos = windowEl.scrollTop() + 150;
-
-            var index = 0;
-            do {
-              index++;
-            } while (index < sectionCount && scrollPos > sectionArray[index].offset);
-
-            scope.scroll = {
-              position: sectionArray[index-1].title,
-              image: sectionArray[index-1].image
-            }
-          };
-
-          if (sectionCount > 1) {
-            windowEl.on('scroll', scope.$apply.bind(scope, handler));
-            windowEl.on('mousewheel DOMMouseScroll', function(e) {
-                var d = e.originalEvent.wheelDelta || -e.originalEvent.detail,
-                    dir = d > 0 ? 'up' : 'down',
-                    stop = (dir == 'up' && this.scrollTop == 0) ||
-                           (dir == 'down' && this.scrollTop == this.scrollHeight-this.offsetHeight);
-                stop && e.preventDefault();
-            });
-          }
-          handler();
-        }
+        windowEl.on('scroll', scope.$apply.bind(scope, handler));
 
         scope.$on('$destroy', function() {
           windowEl.off('scroll');
-          windowEl.off('mousewheel DOMMouseScroll');
         })
       }
     };

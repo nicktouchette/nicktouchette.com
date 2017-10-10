@@ -18,26 +18,14 @@
 
     vm.contact = angular.copy(defaults);
 
-    vm.sections = [{
-      title: 'Test',
-      image: '../assets/images/building.jpg',
-      body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
-    },{
-      title: 'Test2',
-      body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
-    },{
-      title: 'Test3',
-      body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
-    },{
-      title: 'Test4',
-      body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
-    }]
+    // // init controller
+    // var controller = new ScrollMagic.Controller();
 
-    vm.section = [{
-      title: 'Test',
-      image: '../assets/images/building.jpg',
-      body: 'Lorem ipsum dolor sit amet, an mazim noluisse suscipiantur his. Nisl legendos ex eam, errem numquam reprehendunt sed id, no dicam iracundia sed. Sit verear antiopam ad, his movet aliquid repudiare ei. Scaevola consequat prodesset te mel. Meliore feugait nam ut, te pri liber iuvaret corpora.'
-    }]
+    // // create a scene
+    // var scene = new ScrollMagic.Scene({triggerElement: "#solution"})
+    //     // .setPin("#solution") // pins the element for the the scene's duration
+    //     .addIndicators()
+    //     .addTo(controller); // assign the scene to the controller
 
     vm.submit = function(form) {
       Restangular.all('submit').post(vm.contact)
@@ -50,9 +38,8 @@
     }
 
     vm.scrollTo = function(section) {
-      console.log('scrolling')
       $(section)
-        .velocity("scroll", { duration: 1000, easing: "easeInOutCirc" });
+        .velocity('scroll', { container: $('#main'), duration: 1000, easing: 'easeInOutCirc' });
     }
   }
 })();

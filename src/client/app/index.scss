@@ -82,6 +82,13 @@ body {
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 100%;
+}
+
+.layout-full {
+  position: absolute;
+  height: inherit;
+  width: 100%;
 }
 
 ul {

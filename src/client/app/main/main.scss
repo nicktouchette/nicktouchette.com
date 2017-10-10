@@ -1,7 +1,8 @@
-#landing,
 #stack,
 #solution,
 #contact {
+  display: block;
+  position: relative;
   min-height: 100vh;
   padding-bottom: 150px;
 }
@@ -20,7 +21,7 @@
   }
 
   .landing-text {
-    width: 472px;
+    width: 303px;
     transform: translate(-50%, -1em);
   }
 
@@ -31,6 +32,8 @@
   .more {
     position: absolute;
     display: inline-block;
+    left: 50%;
+    transform: translateX(-50%) !important;
     bottom: 5%;
     color: $orange;
     font-weight: 100;
@@ -45,7 +48,7 @@
 }
 
 #stack {
-  background: url('../assets/images/stack-background.png') no-repeat 5% 5%/531px 448px fixed;
+  background: url('../assets/images/stack-background.png') no-repeat center/contain fixed;
 
   .brands {
     width: 720px;
@@ -57,7 +60,7 @@
 }
 
 #solution {
-  background: url('../assets/images/solution-background.png') no-repeat 5% 5%/514px auto fixed;
+  background: url('../assets/images/solution-background.png') no-repeat center/contain fixed;
 
   .points {
     position: relative;
@@ -68,6 +71,7 @@
       display: inline-block;
       margin: 15px;
       width: 314px;
+      height: 283px;
     }
   }
 
@@ -77,7 +81,7 @@
 }
 
 #contact {
-  background: url('../assets/images/contact-background.png') no-repeat 5% 5%/449px auto fixed;
+  background: url('../assets/images/contact-background.png') no-repeat center/contain fixed;
   padding-bottom: 50px;
 
   form {
@@ -170,15 +174,18 @@ img {
   max-width: 95%;
 }
 
+.scroll-container {
+  overflow-y: scroll;
+}
+
 .header {
   width: 517px;
-  padding-top: 157px;
-  margin-bottom: 50px;
+  padding-top: 150px;
+  padding-bottom: 50px;
 }
 
 .center {
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
 }
 
 .center-both {
