@@ -39,7 +39,7 @@
 
     vm.scrollTo = function(section) {
       $(section)
-        .velocity('scroll', { container: $('#main'), duration: 1000, easing: 'easeInOutCirc' });
+        .velocity('scroll', { duration: 1000, easing: 'easeInOutCirc' });
     }
   }
 })();

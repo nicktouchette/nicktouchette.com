@@ -12,7 +12,10 @@
 }
 
 #landing {
-  height: 100vh;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  min-height: 600px;
 
   .vignette {
     height: 100%;
@@ -21,18 +24,26 @@
   }
 
   .landing-text {
-    width: 303px;
-    transform: translate(-50%, -1em);
+    margin-top: -50%;
   }
 
-  .monogram {
-    width: 28em;
+  .container {
+    display: block;
+    position: relative;
+    max-width: 403px;
+    margin: 0 auto;
+    height: 100%;
+
+    img {
+      position: relative;
+    }
   }
 
   .more {
     position: absolute;
     display: inline-block;
     left: 50%;
+    z-index: 3;
     transform: translateX(-50%) !important;
     bottom: 5%;
     color: $orange;
