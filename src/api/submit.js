@@ -1,4 +1,4 @@
-const env = require('env');
+const env = require('./.env');
 
 var submit = (data, mailer) => {
   return new Promise((resolve, reject) => {
