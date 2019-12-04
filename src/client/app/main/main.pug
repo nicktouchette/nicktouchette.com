@@ -18,33 +18,33 @@
     img.point(src='./assets/images/solution4.png')
     img.point(src='./assets/images/solution5.png')
     img.point(src='./assets/images/solution6.png')
-#contact
-  img.header.center(src='./assets/images/contact-header.png')
-  form.submit-form.center(name='contactForm' novalidate ng-submit="contactForm.$valid && vm.submit(contactForm)")
+//- #contact
+//-   img.header.center(src='./assets/images/contact-header.png')
+//-   form.submit-form.center(name='contactForm' novalidate ng-submit="contactForm.$valid && vm.submit(contactForm)")
 
-    span.field-title name
-    .alert(ng-messages='contactForm.$submitted && contactForm.name.$error' role='alert')
-      span(ng-message='required') Please enter your name.
-    input(ng-disabled='vm.submitSuccessful' required type='text' name='name' ng-model='vm.contact.name')
+//-     span.field-title name
+//-     .alert(ng-messages='contactForm.$submitted && contactForm.name.$error' role='alert')
+//-       span(ng-message='required') Please enter your name.
+//-     input(ng-disabled='vm.submitSuccessful' required type='text' name='name' ng-model='vm.contact.name')
 
-    span.field-title company
-    .alert(ng-messages='contactForm.$submitted && contactForm.company.$error' role='alert')
-      span(ng-message='required') Please enter the name of your company.
-    input(ng-disabled='vm.submitSuccessful' required type='text' name='company' ng-model='vm.contact.company')
+//-     span.field-title company
+//-     .alert(ng-messages='contactForm.$submitted && contactForm.company.$error' role='alert')
+//-       span(ng-message='required') Please enter the name of your company.
+//-     input(ng-disabled='vm.submitSuccessful' required type='text' name='company' ng-model='vm.contact.company')
 
-    span.field-title email
-    .alert(ng-messages='contactForm.$submitted && contactForm.email.$error' role='alert')
-      span(ng-message='required') Please enter an email.
-      span(ng-message='email') Please enter a valid email.
-    input(ng-disabled='vm.submitSuccessful' required type='email' name='email' ng-model='vm.contact.email')
+//-     span.field-title email
+//-     .alert(ng-messages='contactForm.$submitted && contactForm.email.$error' role='alert')
+//-       span(ng-message='required') Please enter an email.
+//-       span(ng-message='email') Please enter a valid email.
+//-     input(ng-disabled='vm.submitSuccessful' required type='email' name='email' ng-model='vm.contact.email')
 
-    span.field-title message
-    .alert(ng-messages='contactForm.$submitted && contactForm.message.$error' role='alert')
-      span(ng-message='required') Please enter a message.
-    textarea(ng-disabled='vm.submitSuccessful' required name='message' rows='3' ng-model='vm.contact.message')
+//-     span.field-title message
+//-     .alert(ng-messages='contactForm.$submitted && contactForm.message.$error' role='alert')
+//-       span(ng-message='required') Please enter a message.
+//-     textarea(ng-disabled='vm.submitSuccessful' required name='message' rows='3' ng-model='vm.contact.message')
 
-    input(ng-disabled='vm.submitSuccessful' type='submit' value='{{vm.submitSuccessful ? "Message Sent Successfully!": "Send Message"}}')
-    img.required(src='./assets/images/contact-required.png')
+//-     input(ng-disabled='vm.submitSuccessful' type='submit' value='{{vm.submitSuccessful ? "Message Sent Successfully!": "Send Message"}}')
+//-     img.required(src='./assets/images/contact-required.png')
 #footer
   img.background.center(src='./assets/images/footer-text.png')
   .sites.center
