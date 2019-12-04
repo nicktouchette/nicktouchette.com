@@ -9,7 +9,7 @@ var submit = (data, mailer) => {
 
     // mailer transport config
     let transporter = mailer.createTransport({
-      service: env.service,
+      service: 'gmail',
       auth: {
         user: env.email,
         pass: env.password

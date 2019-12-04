@@ -2,10 +2,10 @@ service: api
 
 provider:
   name: google
-  runtime: nodejs
+  runtime: nodejs10
   project: nicktouchette-api
   # the path to the credentials file needs to be absolute
-  credentials: ~/.gcloud/nicktouchette api-eefa25aaed83.json
+  credentials: ~/.gcloud/nicktouchette-api-75a1b274d378.json
 
 plugins:
   - serverless-google-cloudfunctions
