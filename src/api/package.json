@@ -12,7 +12,7 @@
     "cors": "^2.8.5",
     "nodemailer": "^6.3.1",
     "nodemailer-smtp-transport": "^2.7.4",
-    "serverless": "^1.58.0",
+    "serverless": "^3.25.1",
     "serverless-google-cloudfunctions": "^2.3.3"
   }
 }
